@@ -1,0 +1,4 @@
+[submodule "isserver1/apps-preview"]
+	path = isserver1/apps-preview
+	url = git@github.com:isserver1/apps-preview.git
+	branch = 16.0
