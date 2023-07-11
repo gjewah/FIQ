@@ -5,3 +5,8 @@
 	path = OCA/crm
 	url = git@github.com:OCA/crm.git
 	branch = 16.0
+
+[submodule "cetmix/cetmix-messages"]
+	path = cetmix/cetmix-messages
+	url = git@github.com:cetmix/cetmix-messages.git
+	branch = 16.0
