@@ -10,3 +10,8 @@
 	path = cetmix/cetmix-messages
 	url = git@github.com:cetmix/cetmix-messages.git
 	branch = 16.0
+
+[submodule "OCA/brand"]
+	path = OCA/brand
+	url = git@github.com:OCA/brand.git
+	branch = 16.0
