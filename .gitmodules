@@ -1,0 +1,4 @@
+[submodule "OCA/brand"]
+	path = OCA/brand
+	url = git@github.com:OCA/brand.git
+	branch = 16.0
