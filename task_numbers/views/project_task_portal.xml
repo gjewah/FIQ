@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="portal_tasks_list" inherit_id="project.portal_tasks_list">
+        <xpath expr="//span[@t-esc='task.id']" position="replace">
+            <span t-out="task.un_reference"/>
+        </xpath>
+    </template>
+    <template id="portal_my_task" inherit_id="project.portal_my_task">
+        <xpath expr="//h5/div/small[hasclass('text-muted')]" position="replace">
+            <small class="text-muted d-none d-md-inline"> (#<span t-field="task.un_reference"/>)</small>
+        </xpath>
+    </template>
+
+</odoo>
