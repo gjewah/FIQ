@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mail_activity_todo,access_mail_activity_todo,model_mail_activity_todo,base.group_user,1,1,1,1
+access_do_with_feedback,access_do_with_feedback,model_do_with_feedback,base.group_user,1,1,1,1
+access_create_new_activity,access_create_new_activity,model_create_new_activity,base.group_user,1,1,1,1
+access_ir_model_todo,ir_model_notify,base.model_ir_model,base.group_user,1,0,0,0
