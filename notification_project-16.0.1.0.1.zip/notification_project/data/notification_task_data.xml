@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="tasks_table_mail_layout">
+        &lt;!DOCTYPE html&gt;
+        <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+                <meta name="format-detection" content="telephone=no"/>
+                <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+                <style>
+                    * {
+                        box-sizing: border-box !important;
+                    }
+                    * h1, h2, h3, h4, h5, h6, p, td, th {
+                        font-family: Arial, sans-serif !important;
+                    }
+                    /* Remove space around the email design. */
+                    html,
+                    body {
+                        margin: 0 auto !important;
+                        padding: 0 !important;
+                        height: 100% !important;
+                        width: 100% !important;
+                    }
+                    * {
+                        -ms-text-size-adjust: 100%;
+                    }
+                    td {
+                        mso-table-lspace: 0pt !important;
+                        mso-table-rspace: 0pt !important;
+                    }
+                    a {
+                        text-decoration: none;
+                    }
+                </style>
+            </head>
+            <body>
+                <t t-out="body"/>
+            </body>
+        </html>
+    </template>
+
+    <template id="project_task_notification_template">
+<table cellspacing="0" cellpadding="0" border="0" width="1534px" align="center" style='padding:0px; margin:0px auto; min-height:100%; height:100%; width:100%; line-height:1; font-weight:400; font-size:12.25px; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; text-align:inherit; border-collapse:collapse; background-color:#e9ecef;'>
+    <tbody>
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" border="0" width="720px" align="center" style="padding:0px 15px; margin:0px auto; max-width:720px; width:100%; border-collapse:collapse; text-align:inherit; font-size:unset; line-height:unset">
+                    <tbody>
+                        <tr style="margin:0 -15px 0 -15px">
+                            <td colspan="12" width="100%" style="padding:0 0px 0 0px; background-color:#ffffff; max-width:100%; width:100%; text-align:inherit">
+                                <table cellspacing="0" cellpadding="0" border="0" width="720px" align="center" style="margin:0px auto; width:100%; border-collapse:collapse; text-align:inherit; font-size:unset; line-height:unset;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                <strong>Task</strong>
+                                            </td>
+                                            <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                <strong>Deadline</strong>
+                                            </td>
+                                            <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                <strong>Delay days</strong>
+                                            </td>
+                                            <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                <strong>Assignees</strong>
+                                            </td>
+                                            <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                <strong>Project</strong>
+                                            </td>
+                                            <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                <strong>Stage</strong>
+                                            </td>
+                                        </tr>
+                                        <t t-foreach="task_ids" t-as="task">
+                                            <tr>
+                                                <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                    <a t-attf-href="#{task.action_get_task_signup_url(assignee_id)}">
+                                                        <t t-out="task.name"/>
+                                                    </a>
+                                                </td>
+                                                <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                    <t t-if="task.date_deadline" t-out="task.date_deadline"/>
+                                                </td>
+                                                <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                    <t t-if="task.date_deadline">
+                                                        <t t-out="task.action_get_deadline_delay()"/>
+                                                    </t>
+                                                </td>
+                                                <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                    <t t-foreach="task.user_ids" t-as="tuser">
+                                                        <t t-out="tuser.name"/>;
+                                                    </t>
+                                                </td>
+                                                <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                    <t t-if="task.project_id" t-out="task.project_id.name"/>
+                                                </td>
+                                                <td style="padding:4px 4px 4px 4px; border-color:rgba(238, 238, 238); border-width:1px; border-style:solid !important;">
+                                                    <t t-if="task.stage_id" t-out="task.stage_id.name"/>
+                                                </td>
+                                            </tr>
+                                        </t>                                        
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+    </template>
+
+</odoo>
