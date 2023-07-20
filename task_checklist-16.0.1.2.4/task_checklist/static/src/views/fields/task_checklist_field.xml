@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="task_checklist.TaskChecklistField" owl="1">
+        <div>
+            <TaskChecklist t-props="this.checkListProps()"/>
+        </div>
+    </t>
+
+</templates>
