@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="sh_meeting_custom_checklist_template_form_view" model="ir.ui.view">
+        <field name="name">meeting.custom.checklist.template.form</field>
+        <field name="model">meeting.custom.checklist.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <field name="checklist_template_ids" widget="many2many_tags" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_menu_meeting_custom_template_checklist">
+        <field name="name">Meeting Checklist Template</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">meeting.custom.checklist.template</field>
+        <field name="view_mode">form</field>
+    </record>
+    
+</odoo>

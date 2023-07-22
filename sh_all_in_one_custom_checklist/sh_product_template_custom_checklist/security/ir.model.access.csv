@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_custom_checklist,access_product_custom_checklist,model_product_custom_checklist,base.group_user,1,1,1,1
+access_product_custom_checklist_template,access_product_custom_checklist_template,model_product_custom_checklist_template,base.group_user,1,1,1,1
+access_product_template_custom_checklist_line,access_product_template_custom_checklist_line,model_product_template_custom_checklist_line,base.group_user,1,1,1,1

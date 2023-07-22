@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="sh_mrp_custom_checklist_tree_view_inherit" model="ir.ui.view">
+        <field name="name">mrp.oppor.custom.checklist.tree</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_tree_view" />
+        <field name="arch" type="xml">
+            <field name="state" position="after">
+                <field name="custom_checklist" widget="progressbar" optional="show" />
+            </field>
+        </field>
+    </record>
+
+    <record id="sh_mrp_custom_checklist_kanban_view_inherit" model="ir.ui.view">
+        <field name="name">mrp.custom.checklist.kanban</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_kanban_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_record_bottom')]" position="before">
+                <div>
+                    <field name="custom_checklist" string="Checklist" widget="percentpie" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_mrp_custom_checklist_search_view_inherit" model="ir.ui.view">
+        <field name="name">mrp.custom.checklist.search</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.view_mrp_production_filter" />
+        <field name="arch" type="xml">
+            <filter name="activities_exception" position="after">
+                <filter name="complete_check" string="Complete Checklist" domain="[('mrp_complete_state','=', True)]" />
+                <filter name="complete_check" string="Uncomplete Checklist" domain="[('mrp_complete_state','=', False)]" />
+            </filter>
+        </field>
+    </record>
+
+    <record id="sh_mrp_custom_checklist_form_view_inherit" model="ir.ui.view">
+        <field name="name">mrp.custom.checklist.form</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="custom_checklist" string="Checklist" groups="sh_all_in_one_custom_checklist.group_mrp_custom_checklist">
+                    <button name="%(action_menu_mrp_custom_checklist)d" type="action" class="oe_stat_button" style="height: 40px; background: White;">
+                        <field name="custom_checklist" string="Checklist Completed" widget="percentpie" style="height: 30px; background: White;" />
+                    </button>
+                    <span style="padding-left:50px;">Checklist Template </span>
+                    <field name="custom_checklist_template_ids" widget="many2many_tags" />
+                    <field name="mrp_complete_state" invisible="1" />
+                    <field name="custom_checklist_ids">
+                        <tree editable="bottom">
+                            <field name="name" />
+                            <field name="description" />
+                            <field name="updated_date" />
+                            <field name="company_id" invisible="1" />
+                            <field name="state" widget="badge" decoration-success="state == 'completed'" decoration-danger="state=='cancelled'" decoration-mute="state == 'new'" />
+                            <button string="Complete" name="btn_check" type="object" icon="fa-check" attrs="{'invisible':[('state','=','completed')]}" />
+                            <button string="Cancel" name="btn_close" type="object" icon="fa-close" attrs="{'invisible':[('state','=','cancelled')]}" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

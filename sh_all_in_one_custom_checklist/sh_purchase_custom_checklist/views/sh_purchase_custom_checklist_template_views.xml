@@ -1,0 +1,56 @@
+<odoo>
+    <record id="sh_purcahse_custom_checklist_template_form_view" model="ir.ui.view">
+        <field name="name">purchase.custom.checklist.template.form</field>
+        <field name="model">purchase.custom.checklist.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="company_id" options="{'no_create': True}" />
+                        </group>
+                        <group>
+                            <field name="checklist_template_ids" widget="many2many_tags" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_purchase_custom_checklist_template_tree_view" model="ir.ui.view">
+        <field name="name">purchase.custom.checklist.template.tree</field>
+        <field name="model">purchase.custom.checklist.template</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="company_id"/>
+                <field name="checklist_template_ids" widget="many2many_tags" optional="show" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_purchase_custom_checklist_template_search_view" model="ir.ui.view">
+        <field name="name">purchase.custom.checklist.template.view.search</field>
+        <field name="model">purchase.custom.checklist.template</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="checklist_template_ids" />
+                <filter string="Checklist Template" name="checklist_template" domain="[]" context="{'group_by': 'checklist_template_ids'}" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_menu_purchase_custom_template_checklist">
+        <field name="name">Purchase Checklist Template</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">purchase.custom.checklist.template</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_purchase_custom_checklist_template" groups="sh_all_in_one_custom_checklist.group_purchase_custom_checklist" name="Purchase Custom Checklist Template" action="action_menu_purchase_custom_template_checklist" parent="purchase.menu_purchase_config" />
+    
+</odoo>

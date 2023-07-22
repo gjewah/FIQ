@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<record id="sh_product_custom_checklist_form_view" model="ir.ui.view">
+		<field name="name">product.custom.checklist.form</field>
+		<field name="model">product.custom.checklist</field>
+		<field name="arch" type="xml">
+			<form groups="sh_all_in_one_custom_checklist.group_product_custom_checklist">
+				<sheet>
+					<group>
+						<group>
+							<field name="name" />
+							<field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" />
+						</group>
+						<group>
+							<field name="description" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="sh_product_custom_checklist_tree_view" model="ir.ui.view">
+		<field name="name">product.custom.checklist.tree</field>
+		<field name="model">product.custom.checklist</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name" groups="sh_all_in_one_custom_checklist.group_product_custom_checklist" />
+				<field name="description" groups="sh_all_in_one_custom_checklist.group_product_custom_checklist" />
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_menu_product_custom_checklist">
+		<field name="name">Product Custom Checklist</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">product.custom.checklist</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+</odoo>

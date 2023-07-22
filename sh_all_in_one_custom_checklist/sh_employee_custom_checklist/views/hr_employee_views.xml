@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="sh_hr_employee_custom_checklist_tree_view_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.custom.checklist.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree" />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field name="entry_custom_checklist" widget="progressbar" string="Entry Checklist" optional="show" />
+                <field name="exit_custom_checklist" widget="progressbar" string="Exit Checklist" optional="show" />
+            </field>
+        </field>
+    </record>
+
+    <record id="sh_hr_employee_custom_checklist_kanban_view_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.custom.checklist.kanban</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.hr_kanban_view_employees" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_kanban_details')]" position="inside">
+                <div>
+                    <field name="entry_custom_checklist" string="Entry" widget="percentpie" />
+                    <field name="exit_custom_checklist" string="Exit" widget="percentpie" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_employee_entry_custom_checklist_search_view_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.custom.checklist.search</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter" />
+        <field name="arch" type="xml">
+            <filter name="message_needaction" position="after">
+                <filter string="Entry Complete Checklist" name="entry_complete_state" domain="[('employee_entry_complete_state','=', True)]" />
+                <filter string="Entry Uncompleted Checklist" name="entry_uncomplete_state" domain="[('employee_entry_complete_state','=', False)]" />
+                <filter string="Exit Complete Checklist" name="exit_complete_state" domain="[('employee_exit_complete_state','=', True)]" />
+                <filter string="Exit Uncompleted Checklist" name="exit_uncomplete_state" domain="[('employee_exit_complete_state','=', False)]" />
+            </filter>
+        </field>
+    </record>
+
+    <record id="sh_hr_employee_custom_checklist_form_view_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.custom.checklist.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="entry_custom_checklist_page" string="Entry Checklist">
+                    <button name="%(action_menu_employee_entry_custom_checklist)d" type="action" class="oe_stat_button" style="height: 40px; background: White;">
+                        <field name="entry_custom_checklist" string="Checklist Completed" widget="percentpie" style="height: 30px; background: White;" />
+                    </button>
+                    <span style="padding-left:50px;">Entry Checklist Template </span>
+                    <field name="custom_checklist_entry_template_ids" widget="many2many_tags" />
+                    <field name="employee_entry_complete_state" invisible="1" />
+                    <field name="entry_custom_checklist_ids">
+                        <tree editable="bottom">
+                            <field name="name" />
+                            <field name="description" />
+                            <field name="updated_date" />
+                            <field name="company_id" invisible="1" />
+                            <field name="state" widget="badge" decoration-success="state == 'completed'" decoration-danger="state=='cancelled'" decoration-mute="state == 'new'" />
+                            <button string="Complete" name="btn_check" type="object" icon="fa-check" attrs="{'invisible':[('state','=','completed')]}" />
+                            <button string="Cancel" name="btn_close" type="object" icon="fa-close" attrs="{'invisible':[('state','=','cancelled')]}" />
+                        </tree>
+                    </field>
+                </page>
+                <page name="exit_custom_checklist_page" string="Exit Checklist">
+                    <button name="%(action_menu_employee_exit_custom_checklist)d" type="action" class="oe_stat_button" style="height: 40px; background: White;">
+                        <field name="exit_custom_checklist" string="Checklist Completed" widget="percentpie" style="height: 30px; background: White;" />
+                    </button>
+                    <span style="padding-left:50px;">Exit Checklist Template </span>
+                    <field name="custom_checklist_exit_template_ids" widget="many2many_tags" />
+                    <field name="employee_exit_complete_state" invisible="1" />
+                    <field name="exit_custom_checklist_ids">
+                        <tree editable="bottom">
+                            <field name="name" />
+                            <field name="description" />
+                            <field name="updated_date" />
+                            <field name="company_id" invisible="1" />
+                            <field name="state" widget="badge" decoration-success="state == 'completed'" decoration-danger="state=='cancelled'" decoration-mute="state == 'new'" />
+                            <button string="Complete" name="btn_check" type="object" icon="fa-check" attrs="{'invisible':[('state','=','completed')]}" />
+                            <button string="Cancel" name="btn_close" type="object" icon="fa-close" attrs="{'invisible':[('state','=','cancelled')]}" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

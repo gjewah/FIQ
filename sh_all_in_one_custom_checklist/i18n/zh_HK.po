@@ -1,0 +1,1216 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_all_in_one_custom_checklist
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0beta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-26 07:08+0000\n"
+"PO-Revision-Date: 2022-09-26 07:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_template_custom_checklist_form_view_inherit
+msgid ""
+"<i class=\"fa fa-fw o_button_icon fa-arrow-right\"/>\n"
+"                            Manage Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_template_custom_checklist_form_view_inherit
+msgid ""
+"<i class=\"fa fa-fw o_button_icon fa-arrow-right\"/>\n"
+"                            Manage Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_rfq_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_delivery_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_checklist_reports
+msgid ""
+"<span style=\"font-size: 18px; font-weight: bold;\">Completed Checklist "
+":</span>"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_task_custom_checklist_form_view_inherit
+msgid "<span style=\"padding-left:50px;\">Check List </span>"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_lead_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_meeting_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_project_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_lead_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_order_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_custom_checklist_form_view_inherit
+msgid "<span style=\"padding-left:50px;\">Checklist Template </span>"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_form_view_inherit
+msgid "<span style=\"padding-left:50px;\">Entry Checklist Template </span>"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_form_view_inherit
+msgid "<span style=\"padding-left:50px;\">Exit Checklist Template </span>"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_rfq_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_delivery_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_checklist_reports
+msgid "<span>Checklist</span>"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_crm_custom_checklist
+msgid "CRM Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_crm_custom_template_checklist
+msgid "CRM Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_crm_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_crm_custom_checklist
+msgid "CRM Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_crm_custom_checklist_line
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_mrp_custom_checklist_line
+msgid "CRM Custom Checklist Line"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_crm_custom_checklist_template
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_crm_custom_checklist_template
+msgid "CRM Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_line__calendar_id
+msgid "Calendar"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_calendar_event
+msgid "Calendar Event"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_lead_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_meeting_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_template_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_project_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_task_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_lead_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_order_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_custom_checklist_form_view_inherit
+msgid "Cancel"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__calendar_event__meeting_complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__crm_custom_checklist_line__state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__crm_lead__crm_lead_complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__employee_entry_custom_checklist_line__state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__employee_exit_custom_checklist_line__state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__hr_employee__employee_entry_complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__hr_employee__employee_exit_complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__meeting_custom_checklist_line__state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__mrp_custom_checklist_line__state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__mrp_production__mrp_complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__product_template__complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__product_template_custom_checklist_line__state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__project_custom_checklist_line__state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__project_project__project_complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__project_task__task_complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__purchase_custom_checklist_line__state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__purchase_order__complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__sale_custom_checklist_line__state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__sale_order__complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__stock_custom_checklist_line__state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__stock_picking__stock_complete_state__cancelled
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__task_custom_checklist_line__state__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template__checklist_template
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template__entry_checklist_template
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template__exit_checklist_template
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_template__checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template__checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_task__check_list_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template__checklist_template
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template__checklist_ids
+msgid "Check List"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_calendar_event__custom_checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_lead__custom_checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_production__custom_checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist_template__sh_checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template__checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template__checklist_template_ids
+msgid "CheckList Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_calendar_event__custom_chekclist_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_lead__custom_checklist_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_hr_employee__entry_custom_checklist_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_production__custom_checklist_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_product__custom_checklist_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template__custom_checklist_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_project__custom_checklist_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_task__custom_checklist_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_order__custom_checklist_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_order__custom_checklist_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_picking__custom_checklist_ids
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_lead_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_lead_oppor_custom_checklist_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_oppor_custom_checklist_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_meeting_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_custom_checklist_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_template_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_template_custom_checklist_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_project_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_project_custom_checklist_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_task_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_task_custom_checklist_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_lead_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_order_custom_checklist_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_order_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_order_custom_checklist_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_custom_checklist_kanban_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_custom_checklist_form_view_inherit
+msgid "Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_hr_employee__exit_custom_checklist_ids
+msgid "Checklist "
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_calendar_event__custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_lead__custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_production__custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_product__custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template__custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_project__custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_task__custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_order__custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_order__custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_picking__custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_lead_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_meeting_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_template_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_project_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_task_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_lead_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_order_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_custom_checklist_form_view_inherit
+msgid "Checklist Completed"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template__checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_project__checklist_template_ids
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_custom_checklist_template_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_custom_checklist_template_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_custom_checklist_template_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_template_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_custom_checklist_template_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_custom_checklist_template_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_custom_checklist_template_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_custom_checklist_template_search_view
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_task_custom_checklist_template_search_view
+msgid "Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist_template__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist__company_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_lead_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_meeting_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_template_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_project_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_task_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_lead_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_order_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_custom_checklist_form_view_inherit
+msgid "Complete"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_calendar_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_lead_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_lead_opportunities_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_template_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_task_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_order_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_rfq_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_order_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_quotaation_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_custom_checklist_search_view_inherit
+msgid "Complete Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__calendar_event__meeting_complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__crm_custom_checklist_line__state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__crm_lead__crm_lead_complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__employee_entry_custom_checklist_line__state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__employee_exit_custom_checklist_line__state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__hr_employee__employee_entry_complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__hr_employee__employee_exit_complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__meeting_custom_checklist_line__state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__mrp_custom_checklist_line__state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__mrp_production__mrp_complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__product_template__complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__product_template_custom_checklist_line__state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__project_custom_checklist_line__state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__project_project__project_complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__project_task__task_complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__purchase_custom_checklist_line__state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__purchase_order__complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__sale_custom_checklist_line__state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__sale_order__complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__stock_custom_checklist_line__state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__stock_picking__stock_complete_state__completed
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__task_custom_checklist_line__state__completed
+msgid "Completed"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist__create_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist__create_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__crm_id
+msgid "Crm"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_product__custom_checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template__custom_checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_order__custom_checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_order__custom_checklist_template_ids
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_picking__custom_checklist_template_ids
+msgid "Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__updated_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__updated_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__updated_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__updated_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__updated_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__updated_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__updated_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__updated_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__updated_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__updated_date
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_rfq_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_delivery_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_checklist_reports
+msgid "Date"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist__description
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__description
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_rfq_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_delivery_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_checklist_reports
+msgid "Description"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist__display_name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_hr_employee
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__employee_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__employee_id
+msgid "Employee"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_employee_entry_custom_checklist
+msgid "Employee Entry Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_employee_entry_custom_checklist_template
+msgid "Employee Entry Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_employee_entry_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_employee_entry_custom_checklist
+msgid "Employee Entry Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_employee_entry_custom_checklist_line
+msgid "Employee Entry Custom Checklist Line"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_employee_entry_custom_checklist_template
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_employee_entry_custom_checklist_template
+msgid "Employee Entry Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_employee_exit_custom_checklist
+msgid "Employee Exit Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_employee_exit_custom_checklist_template
+msgid "Employee Exit Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_employee_exit_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_employee_exit_custom_checklist
+msgid "Employee Exit Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_employee_exit_custom_checklist_line
+msgid "Employee Exit Custom Checklist Line"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_employee_exit_custom_checklist_template
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_employee_exit_custom_checklist_template
+msgid "Employee Exit Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_kanban_view_inherit
+msgid "Entry"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_hr_employee__custom_checklist_entry_template_ids
+msgid "Entry CheckList Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_tree_view_inherit
+msgid "Entry Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_hr_employee__entry_custom_checklist
+msgid "Entry Checklist Completed"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_entry_custom_checklist_template_search_view
+msgid "Entry Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_employee_entry_custom_checklist_search_view_inherit
+msgid "Entry Complete Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_hr_employee__employee_entry_complete_state
+msgid "Entry State"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_employee_entry_custom_checklist_search_view_inherit
+msgid "Entry Uncompleted Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_kanban_view_inherit
+msgid "Exit"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_hr_employee__custom_checklist_exit_template_ids
+msgid "Exit CheckList Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_hr_employee_custom_checklist_tree_view_inherit
+msgid "Exit Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_hr_employee__exit_custom_checklist
+msgid "Exit Checklist Completed"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_employee_exit_custom_checklist_template_search_view
+msgid "Exit Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_employee_entry_custom_checklist_search_view_inherit
+msgid "Exit Complete Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_hr_employee__employee_exit_complete_state
+msgid "Exit State"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_employee_entry_custom_checklist_search_view_inherit
+msgid "Exit Uncompleted Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist__id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__id
+msgid "ID"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist____last_update
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist__write_uid
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist__write_date
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_lead__crm_lead_complete_state
+msgid "Lead State"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_mrp_custom_checklist
+#: model:res.groups,name:sh_all_in_one_custom_checklist.group_mrp_custom_checklist
+msgid "MRP Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_mrp_custom_checklist_template
+msgid "MRP Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_mrp_custom_checklist
+msgid "Manufacturing Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_mrp_custom_checklist_template
+msgid "Manufacturing Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_mrp_custom_checklist
+msgid "Manufacturing Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_mrp_custom_checklist_template
+msgid "Manufacturing Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_meeting_custom_template_checklist
+msgid "Meeting Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_meeting_custom_checklist
+msgid "Meeting Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_meeting_custom_checklist_line
+msgid "Meeting Custom Checklist Line"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_meeting_custom_checklist_template
+msgid "Meeting Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_line__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_custom_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist__name
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__name
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_rfq_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_delivery_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_checklist_reports
+msgid "Name"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__crm_custom_checklist_line__state__new
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__employee_entry_custom_checklist_line__state__new
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__employee_exit_custom_checklist_line__state__new
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__meeting_custom_checklist_line__state__new
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__mrp_custom_checklist_line__state__new
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__product_template_custom_checklist_line__state__new
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__project_custom_checklist_line__state__new
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__purchase_custom_checklist_line__state__new
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__sale_custom_checklist_line__state__new
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__stock_custom_checklist_line__state__new
+#: model:ir.model.fields.selection,name:sh_all_in_one_custom_checklist.selection__task_custom_checklist_line__state__new
+msgid "New"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__order_id
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__order_id
+msgid "Order"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_product_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_product_custom_checklist
+msgid "Product Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:res.groups,name:sh_all_in_one_custom_checklist.group_product_custom_checklist
+msgid "Product Custom Checklist "
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_product_custom_checklist_template
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_product_custom_checklist_template
+msgid "Product Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_product_template_custom_checklist_line
+msgid "Product Template Custom Checklist Line"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_mrp_production
+msgid "Production Order"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_project_project
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__project_id
+msgid "Project"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_project_custom_checklist
+msgid "Project Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_project_custom_checklist_template
+msgid "Project Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_project_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_project_custom_checklist
+msgid "Project Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_project_custom_checklist_line
+msgid "Project Custom Checklist Line"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_project_custom_checklist_template
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_project_custom_checklist_template
+msgid "Project Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_purchase_custom_checklist
+msgid "Purchase Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_purchase_custom_template_checklist
+msgid "Purchase Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_purchase_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_purchase_custom_checklist
+#: model:res.groups,name:sh_all_in_one_custom_checklist.group_purchase_custom_checklist
+msgid "Purchase Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_purchase_custom_checklist_line
+msgid "Purchase Custom Checklist Line"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_purchase_custom_checklist_template
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_purchase_custom_checklist_template
+msgid "Purchase Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__sale_id
+msgid "Sale"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_sale_custom_checklist
+msgid "Sale Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_sale_custom_checklist_template
+msgid "Sale Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_sale_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_sale_custom_checklist
+#: model:res.groups,name:sh_all_in_one_custom_checklist.group_sales_custom_checklist
+msgid "Sale Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_sale_custom_checklist_line
+msgid "Sale Custom Checklist Line"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_sale_custom_checklist_template
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_sale_custom_checklist_template
+msgid "Sale Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_template__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_template__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_template__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_template__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_template__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_template__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_template__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sh_task_checklist_template__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_template__sequence
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__sh_product_template_id
+msgid "Sh Product Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_calendar_event__meeting_complete_state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_crm_custom_checklist_line__state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_entry_custom_checklist_line__state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_employee_exit_custom_checklist_line__state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_meeting_custom_checklist_line__state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_custom_checklist_line__state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_product__complete_state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template__complete_state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_product_template_custom_checklist_line__state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_custom_checklist_line__state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_project__project_complete_state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_project_task__task_complete_state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_custom_checklist_line__state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_purchase_order__complete_state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_order__complete_state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_picking__stock_complete_state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__state
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_rfq_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_delivery_checklist_reports
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_picking_checklist_reports
+msgid "State"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_mrp_production__mrp_complete_state
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_sale_custom_checklist_line__state
+msgid "State "
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_stock_custom_checklist_line__stock_id
+msgid "Stock"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_stock_custom_checklist
+msgid "Stock Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_stock_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_stock_custom_checklist
+#: model:res.groups,name:sh_all_in_one_custom_checklist.group_stock_custom_checklist
+msgid "Stock Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_stock_custom_checklist_line
+msgid "Stock Custom Checklist Line"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_stock_custom_checklist_template
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_stock_custom_checklist_template
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_stock_custom_checklist_template
+msgid "Stock Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_project_task
+#: model:ir.model.fields,field_description:sh_all_in_one_custom_checklist.field_task_custom_checklist_line__task_id
+msgid "Task"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_task_checklist_template
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_sh_task_checklist_template
+msgid "Task Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.actions.act_window,name:sh_all_in_one_custom_checklist.action_menu_task_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_task_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_task_custom_checklist
+msgid "Task Custom Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_task_custom_checklist_line
+msgid "Task Custom Checklist Line"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.ui.menu,name:sh_all_in_one_custom_checklist.menu_task_check_list_template
+msgid "Task Custom Checklist Template"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model:ir.model,name:sh_all_in_one_custom_checklist.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_mrp_custom_checklist_search_view_inherit
+msgid "Uncomplete Checklist"
+msgstr ""
+
+#. module: sh_all_in_one_custom_checklist
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_calendar_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_lead_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_crm_lead_opportunities_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_product_template_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_project_task_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_purchase_order_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_rfq_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_order_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_sale_quotaation_custom_checklist_search_view_inherit
+#: model_terms:ir.ui.view,arch_db:sh_all_in_one_custom_checklist.sh_stock_custom_checklist_search_view_inherit
+msgid "Uncompleted Checklist"
+msgstr ""

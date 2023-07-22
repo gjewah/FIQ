@@ -1,0 +1,155 @@
+Cases
+========================================================================================================================
+0. Subscribing recipients manually
+-----------------------------------------------------------------------------------------------------------------------
+Expected result: auto following is working
+
+Changes overrriden in mail_compose_message:
+* no composer assumed by the use case
+
+_message_subscribe context: 
+* No important params
+E.g. :  {'lang': 'en_US', 'tz': 'Europe/Brussels', 'uid': 2, 'allowed_company_ids': [1], 'default_res_model': 'crm.lead', 'default_res_id': 58, 'mail_invite_follower_channel_only': False}
+
+
+Context param we orient on:
+* mail_post_autofollow should not be None and mail_create_nosubscribe should be False
+
+
+1. Send email from composer with subscribing (flag turned on)
+------------------------------------------------------------------------------------------------------------------------
+Expected result: auto following is working
+
+Changes overrriden in mail_compose_message:
+* mail_post_autofollow - True
+* force_no_auto_subscription - True
+* mail_create_nosubscribe - False
+
+_message_subscribe context: 
+* default_partner_ids - list of ids
+* mail_post_autofollow - True
+* force_no_auto_subscription - True
+* mail_create_nosubscribe - False
+
+Context param we orient on:
+* force_no_auto_subscription should be True +
+
+
+2. Send email from composer without subscribing (flag turned off)
+------------------------------------------------------------------------------------------------------------------------
+Expected result: auto following is fully blocked
+
+Changes overrriden in mail_compose_message:
+* mail_post_autofollow - False
+* force_no_auto_subscription - False
+* mail_create_nosubscribe - False
+
+_message_subscribe context: 
+* not got to the method because of changes above
+
+Context param we orient on:
+==> no sense to check context since we are not in the method
+However, the case is anyway covered:
+* mail_post_autofollow should not be None or mail_create_nosubscribe should be False
+* force_no_auto_subscription should be False (or None)
+
+
+
+3. Send quick message with default recipients (no composer at all)
+------------------------------------------------------------------------------------------------------------------------
+Expected result: auto following is fully blocked
+
+Changes overrriden in mail_compose_message:
+* no composer assumed by the use case
+
+_message_subscribe context: 
+* mail_post_autofollow - True
+E.g. : {'mail_post_autofollow': True, 'lang': 'en_US', 'tz': 'Europe/Brussels', 'uid': 2, 'allowed_company_ids': [1]}
+
+Context param we orient on:
+* mail_post_autofollow should not be None +
+
+
+3.B Log quick internal note (no composer at all)
+------------------------------------------------------------------------------------------------------------------------
+Expected result: auto following is fully blocked
+
+Changes overrriden in mail_compose_message:
+* no composer assumed by the use case
+
+_message_subscribe context: 
+* mail_post_autofollow - True
+E.g. : {'lang': 'en_US', 'tz': 'Asia/Tbilisi', 'uid': 2, 'allowed_company_ids': [1]}
+
+Context param we orient on:
+* especially added to that goal 'from_mail_post'
+
+
+4. Send quick message with recipients stated by @ (@Mark Demo)
+------------------------------------------------------------------------------------------------------------------------
+==> Should be the same as previous +
+
+
+
+5. Create a new object with user_id and partner_id stated (manually)
+------------------------------------------------------------------------------------------------------------------------
+Expected result: no auto following is blocked.
+
+Changes overrriden in mail_compose_message:
+* no composer assumed by the use case
+
+_message_subscribe context:
+A) If no directly method triggering (e.g. opportunity) - no method is triggered, so no context is checked
+B) If directly method is triggered (e.g. an RFQ is confirmed or stock picking creation):
+ * dict without import params
+ E.g. {'lang': 'en_US', 'tz': 'Europe/Brussels', 'uid': 2, 'allowed_company_ids': [1], 'quotation_only': True}
+
+Context param we orient on in the case B:
+* mail_post_autofollow should not be None +
+
+
+
+6. Create a new object from new email from existing partner (message_new; e.g.: crm.lead alias)
+------------------------------------------------------------------------------------------------------------------------
+Expected result: auto following is fully blocked
+
+Changes overrriden in mail_compose_message:
+* no composer assumed by the use case
+
+_message_subscribe context:
+* mail_create_nosubscribe - False
+E.g. {'lang': 'en_US', 'tz': 'Europe/Brussels', 'uid': 2, 'allowed_company_ids': [1], 'fetchmail_cron_running': True, 'default_fetchmail_server_id': 1, 'attachments_mime_plainxml': True, 'mail_create_nosubscribe': False, 'mail_create_nolog': True}
+
+
+Context param we orient on in the case B:
+* mail_create_nosubscribe should be False +
+
+
+
+7. Answer for existing email
+------------------------------------------------------------------------------------------------------------------------
+==> The same as previous +
+
+
+
+8. Apply to website chat / answer to appply
+------------------------------------------------------------------------------------------------------------------------
+Changes overrriden in mail_compose_message:
+* no composer assumed by the use case
+
+_message_subscribe context (launched when the widget is clicked to be opened on website):
+* mail_create_nosubscribe - True
+E.g. {'lang': False, 'tz': 'Europe/Brussels', 'uid': 2, 'mail_create_nosubscribe': True, 'mail_create_nolog': True}
+
+Context param we orient on in the case B:
+* _message_subscribe should be True +
+
+
+
+9. Sending email channel message
+------------------------------------------------------------------------------------------------------------------------
+Changes overrriden in mail_compose_message:
+* no composer assumed by the use case
+
+_message_subscribe context:
+ no method is triggered, so no context is checked + 
