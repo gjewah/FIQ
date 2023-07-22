@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <template id="sh_sale_checklist_reports" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='signature']" position="before">
+            <t t-if="doc.custom_checklist_ids">
+                <br></br>
+                <div class="row" groups="sh_all_in_one_custom_checklist.group_sales_custom_checklist">
+                    <div class="col-12">
+                        <table class="table table-borderless" style="margin: 0rem;">
+                            <thead>
+                                <tr>
+                                    <td colspan="8" style="text-align: center; background-color: aliceblue; font-size: 22px; font-weight: bold;">
+                                        <span>Checklist</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="8" style="text-align: left;">
+                                        <span style="font-size: 18px; font-weight: bold;">Completed Checklist :</span>
+                                        <span style="font-size: 18px;" t-esc="'%.2f'% doc.custom_checklist" />
+                                        %
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align: top;">
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>State</th>
+                                </tr>
+                            </thead>
+                            <t t-if="doc.custom_checklist_ids">
+                                <t t-foreach="doc.custom_checklist_ids" t-as="sale">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="sale.name" />
+                                            </td>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="sale.description" />
+                                            </td>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="sale.updated_date" />
+                                            </td>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="sale.state" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </t>
+                            </t>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

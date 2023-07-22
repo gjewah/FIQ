@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="sh_purchase_checklist_reports" inherit_id="purchase.report_purchaseorder_document">
+        <xpath expr="//t/div[hasclass('page')]" position="after">
+            <t t-if="o.custom_checklist_ids">
+                <br></br>
+                <div class="row" groups="sh_all_in_one_custom_checklist.group_purchase_custom_checklist">
+                    <div class="col-12">
+                        <table class="table table-borderless" style="margin: 0rem;">
+                            <thead>
+                                <tr>
+                                    <td colspan="8" style="text-align: center; background-color: aliceblue; font-size: 22px; font-weight: bold;">
+                                        <span>Checklist</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="8" style="text-align: left;">
+                                        <span style="font-size: 18px; font-weight: bold;">Completed Checklist :</span>
+                                        <span style="font-size: 18px;" t-esc="'%.2f'% o.custom_checklist" />
+                                        %
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align: top;">
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>State</th>
+                                </tr>
+                            </thead>
+                            <t t-if="o.custom_checklist_ids">
+                                <t t-foreach="o.custom_checklist_ids" t-as="purchase">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="purchase.name" />
+                                            </td>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="purchase.description" />
+                                            </td>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="purchase.updated_date" />
+                                            </td>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="purchase.state" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </t>
+                            </t>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="sh_rfq_checklist_reports" inherit_id="purchase.report_purchasequotation_document">
+        <xpath expr="//t/div[hasclass('page')]" position="after">
+            <t t-if="o.custom_checklist_ids">
+                <br></br>
+                <div class="row" groups="sh_all_in_one_custom_checklist.group_purchase_custom_checklist">
+                    <div class="col-12">
+                        <table class="table table-borderless" style="margin: 0rem;">
+                            <thead>
+                                <tr>
+                                    <td colspan="8" style="text-align: center; background-color: aliceblue; font-size: 22px; font-weight: bold;">
+                                        <span>Checklist</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="8" style="text-align: left;">
+                                        <span style="font-size: 18px; font-weight: bold;">Completed Checklist :</span>
+                                        <span style="font-size: 18px;" t-esc="'%.2f'% o.custom_checklist" />
+                                        %
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align: top;">
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>State</th>
+                                </tr>
+                            </thead>
+                            <t t-if="o.custom_checklist_ids">
+                                <t t-foreach="o.custom_checklist_ids" t-as="rfq">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="rfq.name" />
+                                            </td>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="rfq.description" />
+                                            </td>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="rfq.updated_date" />
+                                            </td>
+                                            <td>
+                                                <p style="font-size: 18px;" t-field="rfq.state" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </t>
+                            </t>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

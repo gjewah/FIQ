@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="sh_employee_entry_custom_checklist_form_view" model="ir.ui.view">
+        <field name="name">employee.entry.custom.checklist.form</field>
+        <field name="model">employee.entry.custom.checklist</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" />
+                        </group>
+                        <group>
+                            <field name="description" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sh_employee_entry_custom_checklist_tree_view" model="ir.ui.view">
+        <field name="name">employee.entry.custom.checklist.tree</field>
+        <field name="model">employee.entry.custom.checklist</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_entry_custom_checklist_search_view" model="ir.ui.view">
+        <field name="name">employee.entry.custom.checklist.view.search</field>
+        <field name="model">employee.entry.custom.checklist</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="description" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_menu_employee_entry_custom_checklist">
+        <field name="name">Employee Entry Checklist</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee.entry.custom.checklist</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_employee_entry_custom_checklist" name="Employee Entry Custom Checklist" action="action_menu_employee_entry_custom_checklist" parent="hr.menu_human_resources_configuration" />
+
+</odoo>

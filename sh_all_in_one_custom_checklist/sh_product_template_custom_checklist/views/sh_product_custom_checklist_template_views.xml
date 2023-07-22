@@ -1,0 +1,50 @@
+<odoo>
+    <record id="sh_product_custom_checklist_template_form_view" model="ir.ui.view">
+        <field name="name">product.custom.checklist.template.form</field>
+        <field name="model">product.custom.checklist.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="company_id" options="{'no_create': True}" />
+                        </group>
+                        <group>
+                            <field name="sh_checklist_template_ids" widget="many2many_tags" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_product_custom_checklist_template_tree_view" model="ir.ui.view">
+        <field name="name">product.custom.checklist.template.tree</field>
+        <field name="model">product.custom.checklist.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="sh_checklist_template_ids" widget="many2many_tags" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_product_custom_checklist_template_search_view" model="ir.ui.view">
+        <field name="name">product.custom.checklist.template.view.search</field>
+        <field name="model">product.custom.checklist.template</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter string="Checklist Template" name="sh_checklist_template_ids" domain="[]" context="{'group_by': 'sh_checklist_template_ids'}" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_menu_product_custom_checklist_template">
+        <field name="name">Product Custom Checklist Template</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.custom.checklist.template</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="sh_crm_custom_checklist_form_view" model="ir.ui.view">
+        <field name="name">crm.custom.checklist.form</field>
+        <field name="model">crm.custom.checklist</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" />
+                        </group>
+                        <group>
+                            <field name="description" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_crm_custom_checklist_tree_view" model="ir.ui.view">
+        <field name="name">crm.custom.checklist.tree</field>
+        <field name="model">crm.custom.checklist</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_crm_custom_checklist_search_view" model="ir.ui.view">
+        <field name="name">crm.custom.checklist.view.search</field>
+        <field name="model">crm.custom.checklist</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="description" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_menu_crm_custom_checklist">
+        <field name="name">CRM Checklist</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">crm.custom.checklist</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_crm_custom_checklist" name="CRM Custom Checklist" action="action_menu_crm_custom_checklist" parent="crm.crm_menu_config" />
+
+</odoo>

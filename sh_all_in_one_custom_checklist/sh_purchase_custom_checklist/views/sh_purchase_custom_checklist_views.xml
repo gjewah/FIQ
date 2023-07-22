@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="sh_purcahse_custom_checklist_form_view" model="ir.ui.view">
+        <field name="name">purchase.custom.checklist.form</field>
+        <field name="model">purchase.custom.checklist</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="company_id" groups="base.group_multi_company" />
+                        </group>
+                        <group>
+                            <field name="description" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_purchase_custom_checklist_tree_view" model="ir.ui.view">
+        <field name="name">purchase.custom.checklist.tree</field>
+        <field name="model">purchase.custom.checklist</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="sh_purchase_custom_checklist_search_view" model="ir.ui.view">
+        <field name="name">purchase.custom.checklist.view.search</field>
+        <field name="model">purchase.custom.checklist</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="description" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_menu_purchase_custom_checklist">
+        <field name="name">Purchase Checklist</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">purchase.custom.checklist</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_purchase_custom_checklist" groups="sh_all_in_one_custom_checklist.group_purchase_custom_checklist" name="Purchase Custom Checklist" action="action_menu_purchase_custom_checklist" parent="purchase.menu_purchase_config" />
+
+</odoo>
