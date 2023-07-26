@@ -1,0 +1,4 @@
+[submodule "odoo-apps"]
+	path = odoo-apps
+	url = git@github.com:cetmix/odoo-apps.git
+	branch = 16.0
