@@ -1,4 +1,0 @@
-[submodule "cetmix/odoo-apps"]
-	path = cetmix/odoo-apps
-	url = git@github.com:cetmix/odoo-apps.git
-	branch = 16.0
