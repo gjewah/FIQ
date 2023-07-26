@@ -1,25 +1,6 @@
 [submodule "isserver1/apps-preview"]
 	path = isserver1/apps-preview
 	url = git@github.com:isserver1/apps-preview.git
-[submodule "OCA/crm"]
-	path = OCA/crm
-	url = git@github.com:OCA/crm.git
-	branch = 16.0
-
-[submodule "cetmix/cetmix-messages"]
-	path = cetmix/cetmix-messages
-	url = git@github.com:cetmix/cetmix-messages.git
-	branch = 16.0
-
-[submodule "OCA/brand"]
-	path = OCA/brand
-	url = git@github.com:OCA/brand.git
-	branch = 16.0
-
-[submodule "OCA/e-commerce"]
-	path = OCA/e-commerce
-	url = git@github.com:OCA/e-commerce.git
-	branch = 16.0
 
 [submodule "cetmix/odoo-apps"]
 	path = cetmix/odoo-apps
