@@ -1,7 +1,3 @@
-[submodule "isserver1/apps-preview"]
-	path = isserver1/apps-preview
-	url = git@github.com:isserver1/apps-preview.git
-
 [submodule "cetmix/odoo-apps"]
 	path = cetmix/odoo-apps
 	url = git@github.com:cetmix/odoo-apps.git
