@@ -7,3 +7,8 @@
 	path = OCA/project
 	url = git@github.com:OCA/project.git
 	branch = 16.0
+
+[submodule "OCA/sale-workflow"]
+	path = OCA/sale-workflow
+	url = git@github.com:OCA/sale-workflow.git
+	branch = 16.0
