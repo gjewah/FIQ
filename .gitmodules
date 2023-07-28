@@ -2,3 +2,8 @@
 	path = odoo-apps
 	url = git@github.com:cetmix/odoo-apps.git
 	branch = 16.0
+
+[submodule "OCA/project"]
+	path = OCA/project
+	url = git@github.com:OCA/project.git
+	branch = 16.0
