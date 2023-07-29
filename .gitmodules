@@ -1,4 +1,14 @@
-[submodule "isserver1/apps-preview"]
-	path = isserver1/apps-preview
-	url = git@github.com:isserver1/apps-preview.git
+[submodule "odoo-apps"]
+	path = odoo-apps
+	url = git@github.com:cetmix/odoo-apps.git
+	branch = 16.0
+
+[submodule "OCA/project"]
+	path = OCA/project
+	url = git@github.com:OCA/project.git
+	branch = 16.0
+
+[submodule "OCA/sale-workflow"]
+	path = OCA/sale-workflow
+	url = git@github.com:OCA/sale-workflow.git
 	branch = 16.0

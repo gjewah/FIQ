@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="project_project_view_form" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <field name="label_tasks" position="after">
+                <field name="un_reference" groups="task_numbers.group_task_numbers_from_project"/>
+            </field>
+            <div name="button_box" position="inside">
+                <button name="action_update_numbering"
+                        type="object"
+                        class="oe_stat_button"
+                        string="Update numbers"
+                        icon="fa-sort-numeric-asc"
+                        groups="base.group_no_one"
+                        confirm="Are you sure? It will change the reference numbers for all tasks of this project as they are just created"
+                />
+            </div>
+        </field>
+    </record>
+
+</odoo>

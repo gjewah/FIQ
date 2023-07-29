@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="add_supplier_wizard_form_view"  model="ir.ui.view">
+        <field name="name">add.supplier.form.view</field>
+        <field name="model">add.supplier</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group name="vendor" string="Vendor">
+                        <field name="partner_id" context="{'res_partner_search_mode': 'supplier'}"/>
+                        <label for="delay"/>
+                        <div>
+                            <field name="delay" class="oe_inline"/> days
+                        </div>
+                        <field name="min_qty"/>
+                    </group>
+                    <group string="Pricelist">
+                        <label for="price" string="Unit Price"/>
+                        <div class="o_row">
+                            <field name="price" class="oe_inline" /><field name="currency_id" groups="base.group_multi_currency"/>
+                        </div>
+                        <label for="date_start" string="Validity"/>
+                        <div class="o_row"><field name="date_start" class="oe_inline"/> to <field name="date_end" class="oe_inline"/></div>
+                    </group>
+                    <group string="Extra">
+                        <field name="product_name"/>
+                        <field name="product_code"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_apply_changes" type="object" string="Update" class="oe_highlight"/>
+                    or
+                    <button name="cancel" string="Cancel" special="cancel" class="oe_link"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_add_supplier" model="ir.actions.act_window">
+        <field name="name">Update Vendor</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">add.supplier</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="add_supplier_wizard_form_view"/>
+        <field name="target">new</field>
+    </record>
+    <record id="action_add_supplier_server_multi" model="ir.actions.server">
+        <field name="name">Update Vendor</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="binding_model_id" ref="product.model_product_template"/>
+        <field name="groups_id"  eval="[(4,ref('purchase.group_purchase_manager'))]"/>
+        <field name="state">code</field>
+        <field name="code">
+action_values = env.ref('product_add_suppliers.action_add_supplier').sudo().read()[0]
+action_values.update({'context': env.context})
+action = action_values
+        </field>
+    </record>
+    <record id="action_add_supplier_variant_server_multi" model="ir.actions.server">
+        <field name="name">Update Vendor</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="product.model_product_product"/>
+        <field name="binding_model_id" ref="product.model_product_product"/>
+        <field name="groups_id"  eval="[(4,ref('purchase.group_purchase_manager'))]"/>
+        <field name="state">code</field>
+        <field name="code">
+action_values = env.ref('product_add_suppliers.action_add_supplier').sudo().read()[0]
+action_values.update({'context': env.context})
+action = action_values
+        </field>
+    </record>
+
+</odoo>

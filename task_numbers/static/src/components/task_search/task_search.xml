@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="task_numbers.QuickSearch" owl="1">
+        <div t-if="projectUser" class="task-numbers-dropdown dropdown-toggle o-no-caret o-dropdown--narrow" title="Search tasks by reference" href="#" role="button">
+            <input type="text" placeholder="tasks search" class="task-numbers-search-box" t-on-keypress="(event) => this._makeSearch(event)"/>
+        </div>
+    </t>
+
+</templates>
