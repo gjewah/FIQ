@@ -27,3 +27,7 @@
 	path = OCA/product-pack
 	url = git@github.com:OCA/product-pack.git
 	branch = 16.0
+[submodule "odoo-apps"]
+	path = odoo-apps
+	url = git@github.com:cetmix/odoo-apps.git
+	branch = 16.0
