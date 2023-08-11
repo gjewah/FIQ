@@ -31,3 +31,8 @@
 	path = odoo-apps
 	url = git@github.com:cetmix/odoo-apps.git
 	branch = 16.0
+
+[submodule "OCA/crm"]
+	path = OCA/crm
+	url = git@github.com:OCA/crm.git
+	branch = 16.0
