@@ -1,8 +1,3 @@
-[submodule "isserver1/apps-preview"]
-	path = isserver1/apps-preview
-	url = git@github.com:isserver1/apps-preview.git
-	branch = 16.0
-
 [submodule "OCA/sale-workflow"]
 	path = OCA/sale-workflow
 	url = git@github.com:OCA/sale-workflow.git
@@ -34,15 +29,5 @@
 
 [submodule "OCA/crm"]
 	path = OCA/crm
-	url = git@github.com:OCA/crm.git
-	branch = 16.0
-
-[submodule "OCA/crm1"]
-	path = OCA/crm1
-	url = git@github.com:OCA/crm.git
-	branch = 16.0
-
-[submodule "OCA/crm2"]
-	path = OCA/crm2
 	url = git@github.com:OCA/crm.git
 	branch = 16.0
