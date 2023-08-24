@@ -31,3 +31,7 @@
 	path = OCA/crm
 	url = git@github.com:OCA/crm.git
 	branch = 16.0
+[submodule "OCA/knowledge"]
+	path = OCA/knowledge
+	url = git@github.com:OCA/knowledge.git
+	branch = 16.0
