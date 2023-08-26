@@ -35,3 +35,8 @@
 	path = OCA/knowledge
 	url = git@github.com:OCA/knowledge.git
 	branch = 16.0
+
+[submodule "OCA/partner-contact"]
+	path = OCA/partner-contact
+	url = git@github.com:OCA/partner-contact.git
+	branch = 16.0
