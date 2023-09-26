@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="knowsystem.KnowSystemEditor" t-inherit-mode="extension">
+        <div name="knowsystem_editor_selectors" position="inside">
+            <select class="knowsystem-selection mt4 ml8 w-50" t-if="this.state.stable" t-attf-disabled="#{!this.state.readonly}" t-on-change="(event) => this._onChangeLanguage(event)">
+                <t t-foreach="state.availableLanguages" t-as="langChoice" t-key="langChoice[0]">
+                    <option t-att-value="langChoice[0]" t-attf-selected="#{langChoice[0] == state.currentLanguage and 'selected' or undefined}">
+                        <t t-out="langChoice[1]"/>
+                    </option>
+                </t>
+            </select>
+        </div>
+        <a name="discard_btn" position="before">
+            <a class="btn btn-primary btn-sm mt4 mb4 ml4 mr4 jstr-hide-mobile jstr-hide-tablet" t-on-click="() => this.onCopyFromLanguage()" t-if="!this.state.readonly and this.state.stable">
+                <i class="fa fa-language"> Copy Translation</i>
+            </a>
+        </t>
+    </t>
+
+</templates>

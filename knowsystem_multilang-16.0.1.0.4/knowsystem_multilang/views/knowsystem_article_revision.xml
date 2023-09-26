@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="knowsystem_article_revision_view_search" model="ir.ui.view">
+        <field name="name">knowsystem.article.revision.search.multilang</field>
+        <field name="model">knowsystem.article.revision</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_revision_view_search"/>
+        <field name="arch" type="xml">
+            <field name="description" position="after">
+                <field name="lang"/>
+            </field>
+            <filter name="by_articles" position="after">
+                <filter string="Language" name="group_lang" context="{'group_by':'lang'}"/>
+            </filter>
+        </field>
+    </record>
+    <record id="knowsystem_article_revision_view_form_viewer" model="ir.ui.view">
+        <field name="name">knowsystem.article.revision.form.viewer.multilang</field>
+        <field name="model">knowsystem.article.revision</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_revision_view_form_viewer"/>
+        <field name="arch" type="xml">
+            <field name="article_id" position="after">
+                <field name="lang"/>
+            </field>
+        </field>
+    </record>
+    <record id="knowsystem_article_revision_view_tree" model="ir.ui.view">
+        <field name="name">knowsystem.article.revision.tree.multilang</field>
+        <field name="model">knowsystem.article.revision</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_revision_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="article_id" position="after">
+                <field name="lang"/>
+            </field>
+        </field>
+    </record>    
+
+</odoo>

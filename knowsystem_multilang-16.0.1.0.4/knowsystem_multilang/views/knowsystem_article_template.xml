@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="knowsystem_article_template_view_form" model="ir.ui.view">
+        <field name="name">knowsystem.article.template.multilang</field>
+        <field name="model">knowsystem.article.template</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_template_view_form"/>
+        <field name="arch" type="xml">
+            <page name="tech" position="inside">
+                <field name="lang" readonly="0"/>
+            </page>
+        </field>
+    </record>
+
+</odoo>

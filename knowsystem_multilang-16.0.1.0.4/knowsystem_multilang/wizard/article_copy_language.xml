@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo>
+
+     <record id="article_copy_language_form_view" model="ir.ui.view">
+        <field name="name">Copy Translation</field>
+        <field name="model">article.copy.language</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="text-muted mb8">
+                    This action will fully replace the article content of the current language with the translated content
+                </div>
+                <group>
+                    <field name="lang"/>
+                    <field name="article_id" invisible="1"/>
+                    <field name="description_arch" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+</odoo>
