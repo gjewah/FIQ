@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Trigger the wizard to add to the documentation -->
+        <record id="knowsystem_article_add_to_documentation" model="ir.actions.server">
+            <field name="name">Add to documentation</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+action = env.ref("documentation_builder.knowsystem_add_to_documentation_action").sudo().read()[0]
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_editor'))]"/>
+        </record>
+
+    </data>
+</odoo>

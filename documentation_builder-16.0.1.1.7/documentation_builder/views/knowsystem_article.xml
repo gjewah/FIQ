@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="knowsystem_article_view_search" model="ir.ui.view">
+        <field name="name">knowsystem.article.search.documentation</field>
+        <field name="model">knowsystem.article</field>
+        <field name="inherit_id" ref="knowsystem_website.knowsystem_article_view_search"/>
+        <field name="arch" type="xml">
+            <field name="create_uid" position="after">
+                <field name="documentation_ids"/>
+            </field>
+            <filter name="not_published" position="after">
+                <separator/>
+                <filter name="used_in_documentation" string="Used in documentation" domain="[('used_in_documentation', '=', True)]"/>
+                <separator/>
+            </filter>
+        </field>
+    </record>
+    <record id="knowsystem_article_view_form_viewer" model="ir.ui.view">
+        <field name="name">knowsystem.article.form.documentation</field>
+        <field name="model">knowsystem.article</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_view_form_viewer"/>
+        <field name="arch" type="xml">
+            <field name="used_in_email_compose" position="after">
+                <field name="documentation_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+            </field>
+        </field> 
+    </record>
+    <record id="knowsystem_article_view_kanban" model="ir.ui.view">
+        <field name="name">knowsystem.article.kanban.documentation</field>
+        <field name="model">knowsystem.article</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_view_kanban"/>
+        <field name="arch" type="xml">
+            <field name="tag_ids" position="after">
+                <field name="documentation_ids"/>
+            </field>
+            <div name="knowsystem_tags" position="attributes">
+                <attribute name="class">col-5</attribute>
+            </div>
+            <div name="knowsystem_section" position="after">
+                <div t-if="record.documentation_ids.raw_value.length" class="col-5 d-flex" title="Used in Documentations">
+                    <i class="fa fa-paperclip ml16"/>
+                    <field name="documentation_ids" widget="many2many_tags" options="{'color_field': 'id'}" class="ml4"/>
+                </div>
+            </div>
+        </field>
+    </record>
+
+</odoo>

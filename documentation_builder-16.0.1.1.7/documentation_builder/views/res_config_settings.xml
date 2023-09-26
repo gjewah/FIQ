@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.cloud.documentation.builder</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="knowsystem_website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="kms_website_last" position="after">
+                <h2 attrs="{'invisible': [('module_documentation_builder', '=', False)]}">
+                    Documentation Builder
+                </h2>
+                <div class="row app_settings_header my-0 ms-0 mw-100 bg-warning bg-opacity-25" attrs="{'invisible': [('module_documentation_builder', '=', False)]}">
+                    <div class="col-xs-12 col-md-6 ms-0 o_setting_box">
+                        <div class="o_setting_right_pane border-start-0 ms-0 ps-0">
+                            <div class="content-group">
+                                <div class="row flex-row flex-nowrap mt8 align-items-center">
+                                    <label class="col ps-0 text-nowrap" string="You are configuring Documentation Builder for the website:" for="docu_builder_website_id"/>
+                                    <field name="docu_builder_website_id" options="{'no_open': True, 'no_create': True}" title="Select website to configure Documentation"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt16 o_settings_container" id="knowsystem_docu_builder_options_1" attrs="{'invisible': [('module_documentation_builder', '=', False)]}">
+                    <div name="docu_portal_option" class="col-xs-12 col-md-6 o_setting_box" attrs="{'invisible': ['|', ('module_documentation_builder', '=', False), ('docu_builder_website_id', '=', False)]}">
+                        <div name="docu_portal_option_1" class="o_setting_left_pane">
+                            <field name="documentation_builder_portal"/>
+                        </div>
+                        <div name="docu_portal_option_2" class="o_setting_right_pane">
+                            <label for="documentation_builder_portal"/>
+                            <div name="docu_portal_option_hint" class="text-muted">
+                                Show Documentation for portal users
+                            </div>
+                        </div>
+                        <div name="docu_public_option_1" class="o_setting_left_pane" attrs="{'invisible': ['|', ('documentation_builder_portal', '=', False), ('docu_builder_website_id', '=', False)]}">
+                            <field name="documentation_builder_public"/>
+                        </div>
+                        <div name="docu_public_option_2"  class="o_setting_right_pane" attrs="{'invisible': ['|', ('documentation_builder_portal', '=', False), ('docu_builder_website_id', '=', False)]}">
+                            <label for="documentation_builder_public"/>
+                            <div name="docu_public_option_hint" class="text-muted">
+                                Show Documentation for any website visitor
+                            </div>
+                        </div>
+                    </div>
+                    <div name="docu_security_option" class="col-xs-12 col-md-6 o_setting_box" attrs="{'invisible': [('docu_builder_website_id', '=', False)]}">
+                        <div name="docu_security_option_1" class="o_setting_left_pane"> </div>
+                        <div name="docu_security_option_2" class="o_setting_right_pane">
+                            <group>
+                                <field name="docu_default_security_action"/>
+                            </group>
+                            <div name="docu_security_option_hint" class="text-muted">
+                                Define the default security action for articles when a user does not have access rights for those
+                            </div>
+                        </div>
+                    </div>    
+                    <div name="docu_attachments_option" class="col-xs-12 col-md-6 o_setting_box" attrs="{'invisible': [('docu_builder_website_id', '=', False)]}">
+                        <div name="docu_attachments_option_1" class="o_setting_left_pane">
+                            <field name="docu_attachments_show"/>
+                        </div>
+                        <div name="docu_attachments_optionn_2" class="o_setting_right_pane">
+                            <label for="docu_attachments_show"/>
+                            <div name="docu_attachments_option_hint" class="text-muted">
+                                Show articles' attachments under their content
+                            </div>
+                        </div>
+                    </div>                                   
+                    <div name="docu_versioning_option" class="col-xs-12 col-md-6 o_setting_box" attrs="{'invisible': [('module_documentation_builder', '=', False)]}">
+                        <div name="docu_version_option_1" class="o_setting_left_pane">
+                            <field name="group_documentation_versioning"/>
+                        </div>
+                        <div name="docu_version_option_2" class="o_setting_right_pane">
+                            <label for="group_documentation_versioning"/>
+                            <div name="docu_version_option_hint" class="text-muted">
+                                Manage various documentation versions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </field>
+    </record>
+
+</odoo>

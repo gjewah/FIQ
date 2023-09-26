@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+
+     <record id="add_to_documentation_form_view" model="ir.ui.view">
+        <field name="name">add.to.documentation.form.view</field>
+        <field name="model">add.to.documentation</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="article_ids" widget="many2many_tags" invisible="1"/>
+                    <field name="section_id"/>
+                    <field name="security_action"/>
+                    <field name="version_ids"
+                           widget="many2many_tags"
+                           placeholder="versions..."
+                           options="{'color_field': 'color', 'no_create_edit': 1, 'no_quick_create': 1,}"
+                           groups="documentation_builder.group_documentation_versioning" 
+                           domain="[('section_ids', '=', section_id)]" 
+                           attrs="{'invisible': [('section_id', '=', False)]}"
+                    />
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="knowsystem_add_to_documentation_action" model="ir.actions.act_window">
+        <field name="name">Add to documentation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">add.to.documentation</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="documentation_builder.add_to_documentation_form_view"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

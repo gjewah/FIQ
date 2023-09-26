@@ -1,0 +1,157 @@
+$o-documentation-pg: #e9ecef;
+$o-documentation-dg: #a9a9a9;
+$o-documentation-sg: #717E8E;
+
+.documentation-text-right { text-align: right !important }
+.documentation-overflow-hidden { overflow: hidden !important }
+.documentation-full-view {
+    max-width: 96%;
+    flex: 0 0 96%;
+}
+#documentation_content {
+    min-height: 600px;
+    overflow-wrap: break-word;
+}
+.documentation-warning-section {
+    min-height: 200px;  
+    color: white; 
+    background: repeating-linear-gradient(
+        45deg,
+        #5C5B80,
+        #5C5B80 10px,
+        #7472a3 10px,
+        #7472a3 20px
+    );
+    .documentation-warning-section-label { font-size: 2em }
+}
+/* Section Preview */
+.doc_section_short {
+    cursor: pointer;
+    height: 100%;
+}
+.doc_section_short:hover {
+    margin-top: 4px;
+    box-shadow: 0 0 4px black;
+}
+.documentation-searchbar-img { max-height: 78px }
+.documentation-overview-header { 
+    color: inherit !important; 
+    h3 { font-size:1.3rem }
+}
+.documentation-overview-header:hover { text-decoration: none }
+/* Searchbar */
+.docu-navbar-expand { justify-content: flex-end !important }
+.docu_search_selection { cursor: pointer }
+.docu_search_highlight {
+    background-color: #FFFF99 !important;
+    color: black;
+}
+.docu-input-group { width: 100% !important }
+.line-doc-2 { line-height: 2 }
+/* It has everythin left, since key word might be in a number of html tags*/
+.docu_search_highlight_active { border-left: 8px groove #FF6600 }
+.stickynavtop {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+/* Navigation main. IMPORTANT: USED IN JS FOR SELECTORS */
+#nav_sticky {
+    overflow: auto;
+    border-right: 1px solid $o-documentation-pg;
+    scrollbar-color: $o-documentation-dg;
+    scrollbar-width: thin;
+
+    ul {
+        list-style: none;
+        padding: 0 0 0 0;
+        margin: 0;
+        
+        li {
+            border-bottom: 1px solid $o-documentation-pg;
+            line-height: 100%;
+            padding: 6px 0px;
+            overflow-wrap: break-word;
+            display: none;
+            padding-left: 4px;    
+        }
+    }
+    a {
+        color: inherit;
+        overflow: hidden;
+    }
+    a:hover { text-decoration: none }
+}
+#nav_sticky::-webkit-scrollbar {
+    width: 1px;
+    background-color: $o-documentation-pg;
+}
+#nav_sticky::-webkit-scrollbar-thumb{
+    width: 1px;
+    background-color: $o-documentation-dg;
+    outline: 1px solid $o-documentation-sg;
+}
+.navigation-collapsed {
+    max-width: 4%;
+    flex: 0 0 4%;
+    padding-left: 15px;
+}
+.navigation-collapsed #nav_sticky {
+    border-right: none !important;
+}
+.nav-icon {
+    margin-right: 8px;
+    cursor: pointer;
+}
+.nav-icon:hover { color: inherit !important }
+/* Actions on nav anchors */
+#nav_sticky li i.nav_anchor_collapse{ display: none }
+#nav_sticky li.main_nav_entry { display: list-item !important }
+#nav_sticky li.shown_nav_entry { display: list-item !important }
+#nav_sticky li.active_entry {
+    display: list-item !important;
+    font-weight: bold;
+    border-left: 1px solid $o-documentation-dg;
+}
+#nav_sticky li.active_entry i.nav_anchor_expand { display: none }
+#nav_sticky li.active_entry i.nav_anchor_collapse { display: inline-block !important }
+.nav_anchor_icon {
+    padding-right: 2px;
+    padding-left: 4px;
+    font-size: 75%;
+    color: $o-documentation-sg;
+}
+/* Mobile naviagation */
+.nav_sticky_mobile {
+    position: absolute;
+    z-index: 1; 
+    background-color: white; 
+    height: 100vh;
+    width: 180%; /* the div is inside hald-size div, so we put bigger width*/
+    overflow: auto;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding: 4px;
+}
+.nav_bold { font-weight: bold }
+/* Adaptivity */
+#searchbar_versioning { display: flex }
+@media screen and (max-width: 1050px) {
+    .hidden_under1000 {display: none !important;}
+}
+@media screen and (min-width: 1050px) {
+    .hidden_after1000 {display: none !important;}
+}
+@media screen and (max-width: 1050px) {
+    #mobile_navigation_t {
+        padding-right: 8px;
+        padding-top: 4px;
+    }
+    #nav_sticky ul {
+        width: 80% !important;
+    }
+}
+@media screen and (min-width: 1050px) {
+    #searchbar_versioning_t {width: 100%;}
+    #mobile_navigation_t {display: none !important;}
+}
