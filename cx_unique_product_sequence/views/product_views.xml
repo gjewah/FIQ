@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--## Tree ##-->
+    <record id="cx_product__product_tree_view" model="ir.ui.view">
+        <field name="name">cx.product.product.tree.inherit</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view" />
+        <field name="arch" type="xml">
+            <field name="default_code" position="before">
+                <field
+                    name="cx_unique_product_code"
+                    optional="hide"
+                    string="Unique Product Nr."
+                />
+            </field>
+        </field>
+    </record>
+
+     <!--## Search TODO ##-->
+    <record id="cx_product_search" model="ir.ui.view">
+        <field name="name">cx.product.search</field>
+        <field name="model">product.product</field>
+        <field name="priority">99</field>
+        <field name="inherit_id" ref="product.product_search_form_view" />
+        <field name="arch" type="xml">
+           <!-- Add search field for unique product code -->
+           <field name="name" position="after">
+           <field
+                    name="cx_unique_product_code"
+                    string="Unique Product Code"
+                    filter_domain="[('cx_unique_product_code', 'ilike', self)]"
+                />
+           </field>
+        </field>
+    </record>
+
+     <!--## Form ##-->
+       <record id="cx_product_normal_form_view" model="ir.ui.view">
+            <field name="name">cx.product.product.form</field>
+            <field name="model">product.product</field>
+            <field name="mode">primary</field>
+            <field eval="7" name="priority" />
+            <field name="inherit_id" ref="product.product_template_form_view" />
+            <field name="arch" type="xml">
+            <field name="detailed_type" position="before">
+            <field name="cx_unique_product_code" string="Unique number" readonly="1" />
+            </field>
+
+</field>
+
+</record>
+
+</odoo>
