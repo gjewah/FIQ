@@ -1,0 +1,110 @@
+<odoo>
+
+    <record id="res_partner_view_search" model="ir.ui.view">
+        <field name="name">res.partner.search</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <field name="category_id" position="after">
+                <field name="color_codes_search" string="Color Codes"/>
+            </field>
+        </field>
+    </record>
+    <record id="res_partner_view_form_codes_special" model="ir.ui.view">
+        <field name="name">res.partner.form.color.codes</field>
+        <field name="model">res.partner</field>
+        <field name="priority">1000</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="color_code_ids">
+                        <tree>
+                            <field name="color_code_id"/>
+                            <field name="name"/>
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="color_code_id" options="{'no_quick_create': True, 'no_create_edit': True}" required="1"/>
+                                    <field name="name" required="1" placeholder="color code notes"/>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="res_partner_view_form_codes" model="ir.ui.view">
+        <field name="name">res.partner.form.codes</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="company_type" position="after">
+                <field name="color_code_ids" widget="colorCodeWidget"/>
+            </field>
+            <xpath expr="//field[@name='child_ids']/form/sheet/group/group/field[@name='name']" position="before">
+                <field name="color_code_ids" widget="colorCodeWidget"/>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_kanban_details')]/field[@name='name']" position="after">
+                <div>
+                    <field name="color_code_ids" widget="colorCodeWidget"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="res_partner_view_form_simple" model="ir.ui.view">
+        <field name="name">res.partner.simplified.form.codes</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_simple_form"/>
+        <field name="arch" type="xml">
+            <field name="company_type" position="after">
+                <field name="color_code_ids" widget="colorCodeWidget"/>
+            </field>
+        </field>
+    </record>
+    <record id="res_partner_view_form_addresss" model="ir.ui.view">
+        <field name="name">res.partner.form.address.codes</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_address_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position="inside">
+                <field name="color_code_ids" widget="colorCodeWidget"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="res_partner_view_form_private_codes" model="ir.ui.view">
+        <field name="name">res.partner.form.private</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_view_form_private"/>
+        <field name="arch" type="xml">
+            <field name="phone" position="before">
+                <field name="color_code_ids" widget="colorCodeWidget"/>
+            </field>
+        </field>
+    </record>
+    <record id="view_partner_tree" model="ir.ui.view">
+        <field name="name">res.partner.tree</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <field name="display_name" position="before">
+                <field name="id" invisible="1"/>
+                <field name="color_code_ids" widget="colorCodeWidget"/>
+            </field>
+        </field>
+    </record>
+    <record  id="res_partner_kanban_view" model="ir.ui.view">
+        <field name="name">res.partner.kanban</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_tags_section')]" position="before">
+                <div>
+                    <field name="color_code_ids" widget="colorCodeWidget"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-inherit="web.Many2OneField" t-inherit-mode="extension">
+        <xpath expr="." position="inside">
+            <ColorCodes t-if="this.hasColorCodes" t-props="this.colorCodeProps()"/>
+        </xpath>
+    </t>
+
+</templates>

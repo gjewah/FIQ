@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="partner_color_codes.ColorCodes" owl="1">
+        <div class="color-codes" t-if="props.hasColorCodes">
+            <t t-if="state.colorCodes.length">
+                <t t-foreach="state.colorCodes" t-as="colorCode" t-key="colorCode_index">
+                    <div class="color-codes-box" 
+                         t-attf-style="background-color:#{colorCode};"
+                         t-on-click.prevent.stop="(event) => this.onClickColorBox(event)"
+                         t-on-mouseenter="(event) => this.onShowColorBox(event,colorCode)"
+                         t-on-mouseleave="() => this.onHideColorBox()"    
+                    />
+                </t>
+            </t>
+            <div class="color-codes-box color-codes-box-edit" t-on-click.prevent.stop="() => this.onEditColorBox()" title="Click to edit color codes"/>
+        </div>
+    </t>
+    <t t-name="partner_color_codes.ColorCodesToolTip" owl="1">
+        <div class="color-code-tooltip">
+            <div class="color-code-tooltip-box color-code-tooltip-box-manage" t-if="showClose">
+                <button class="btn-close" t-on-click="() => close(true)"/>
+            </div>
+            <t t-if="colorCodes.length">
+                <t t-set="previousColor" t-value="colorCodes[0].color"/>
+                <t t-foreach="colorCodes" t-as="colorCode" t-key="colorCode_index">
+                    <div t-attf-class="color-code-tooltip-box #{previousColor != colorCode.color and 'mt8' or ''}">
+                        <div class="color-code-tooltip-circle">
+                            <span class="fa fa-circle fa-1x" t-att-title="colorCode.color_title" t-attf-style="color:#{colorCode.color}"/>
+                        </div>
+                        <div class="color-code-tooltip-note">
+                            <span t-att-title="colorCode.code_title" t-out="colorCode.name"></span>
+                        </div>
+                    </div>
+                    <t t-set="previousColor" t-value="colorCode.color"/>
+                </t>
+            </t>
+        </div>
+    </t>
+
+</templates>

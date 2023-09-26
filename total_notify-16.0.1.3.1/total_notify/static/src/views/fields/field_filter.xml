@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="total_notify.FieldFilter" owl="1">
+        <t t-if="getResModel(props)">
+            <ModelFieldSelector fieldName="selectorFieldName"
+                                resModel="getResModel(props)" 
+                                readonly="props.readonly" 
+                                isDebugMode="selectorIsDebugMode"
+                                update.bind="update"
+                                filter="getFieldsFilter.bind(this)"
+            />
+        </t>
+    </t>
+
+</templates>

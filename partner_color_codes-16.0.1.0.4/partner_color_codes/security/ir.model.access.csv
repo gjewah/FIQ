@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_color_code,access_color_code,model_color_code,base.group_user,1,1,1,1
+access_color_code_rule,access_color_code_rule,model_color_code_rule,base.group_user,1,1,1,1
+access_color_code_partner,access_color_code_partner,model_color_code_partner,base.group_user,1,1,1,1

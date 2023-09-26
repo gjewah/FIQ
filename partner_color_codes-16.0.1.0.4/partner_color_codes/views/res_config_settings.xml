@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.color.codes</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="user_default_rights" position="after">
+                <h2>Contact Color Codes</h2>
+                <div class="row mt16 o_settings_container" id="color_codes">
+                    <div id="color_codes_classifier" class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <div class="text-muted">Manage the classifier of contacts' color codes</div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <button type="object" name="action_return_color_codes_action" string="Color Codes" icon="fa-arrow-right" class="btn-link"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+
+</odoo>
