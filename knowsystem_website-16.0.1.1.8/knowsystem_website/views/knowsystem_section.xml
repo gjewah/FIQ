@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="knowsystem_section_view_form" model="ir.ui.view">
+        <field name="name">knowsystem.section.form.website</field>
+        <field name="model">knowsystem.section</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_section_view_form"/>
+        <field name="arch" type="xml">
+            <page name="section_description" position="before">
+                <page string="Website and Portal">
+                    <group>
+                        <field name="website_published"/>
+                        <field name="website_id"
+                               options="{'no_create_edit': 1, 'no_quick_create': 1,}"
+                               groups="website.group_multi_website"
+                        />
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+    <record id="knowsystem_section_view_tree" model="ir.ui.view">
+        <field name="name">knowsystem.section.tree.website</field>
+        <field name="model">knowsystem.section</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_section_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="website_published"/>
+            </field>
+        </field>
+    </record>
+    <record id="knowsystem_section_publish" model="ir.actions.server">
+        <field name="name">Website Publish</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="knowsystem.model_knowsystem_section"/>
+        <field name="binding_model_id" ref="knowsystem.model_knowsystem_section"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    records.write({"website_published": True})
+        </field>
+    </record>
+    <record id="knowsystem_section_ubpublish" model="ir.actions.server">
+        <field name="name">Website Unpublish</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="knowsystem.model_knowsystem_section"/>
+        <field name="binding_model_id" ref="knowsystem.model_knowsystem_section"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    records.write({"website_published": False})
+        </field>
+    </record>
+
+</odoo>

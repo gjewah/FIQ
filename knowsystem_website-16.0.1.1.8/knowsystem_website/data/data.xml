@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Publish -->
+        <record id="knowsystem_article_publish" model="ir.actions.server">
+            <field name="name">Publish</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    records.write({"website_published": True})
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_editor'))]"/>
+        </record>
+        <!-- Unpublish -->
+        <record id="knowsystem_article_unpublish" model="ir.actions.server">
+            <field name="name">Unpublish</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    records.write({"website_published": False})
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_editor'))]"/>
+        </record>
+
+
+    </data>
+</openerp>

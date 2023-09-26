@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="knowsystem_article_view_search" model="ir.ui.view">
+        <field name="name">knowsystem.article.search.website</field>
+        <field name="model">knowsystem.article</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_view_search"/>
+        <field name="arch" type="xml">
+            <filter name="inactive" position="before">
+                <separator/>
+                <filter name="published" string="Published" domain="[('website_published', '=', True)]"
+                />
+                <filter name="not_published" string="Not published" domain="[('website_published', '=', False)]"/>
+                <separator/>
+            </filter>
+        </field>
+    </record>
+    <record id="knowsystem_article_view_form_viewer" model="ir.ui.view">
+        <field name="name">knowsystem.article.form.viewer.website</field>
+        <field name="model">knowsystem.article</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_view_form_viewer"/>
+        <field name="arch" type="xml">
+            <page name="knowsystem_attachments" position="before">
+                <page string="Website">
+                    <group>
+                        <field name="website_published"/>
+                        <field name="website_id" 
+                               groups="website.group_multi_website" 
+                               options="{'no_create_edit': 1, 'no_quick_create': 1}"
+                        />
+                        <field name="website_pinned"/>
+                    </group>
+                </page>
+            </page>
+            <field name="internal_url" position="before">
+                <button name="%(portal.portal_share_action)d" 
+                        string="Share with token" 
+                        type="action" 
+                        class="oe_highlight jstr-pull-right"
+                        colspan="2"
+                /> 
+                <field name="full_website_url" readonly="1" widget="CopyClipboardURL"/>
+            </field>
+        </field>
+    </record>
+    <record id="knowsystem_article_view_quick_search" model="ir.ui.view">
+        <field name="name">knowsystem.article.form.quick.search.website</field>
+        <field name="model">knowsystem.article</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_view_quick_search"/>
+        <field name="arch" type="xml">
+            <field name="internal_url" position="before">
+                <button name="%(portal.portal_share_action)d"
+                        string="Share with token"
+                        type="action"
+                        class="oe_highlight jstr-pull-right"
+                        colspan="2"
+                />
+                <field name="full_website_url" readonly="1" widget="CopyClipboardURL"/>
+            </field>
+        </field>
+    </record>
+    <record id="knowsystem_article_view_kanban" model="ir.ui.view">
+        <field name="name">knowsystem.article.kanban.website</field>
+        <field name="model">knowsystem.article</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_view_kanban"/>
+        <field name="arch" type="xml">
+            <field name="color" position="after">
+                <field name="website_published"/>
+            </field>
+            <a name="action_like_the_article" position="before">
+                <a type="object" name="website_publish_button" class="jstr-kanban-bottom-action">
+                    <span t-attf-class="#{!record.website_published.raw_value and 'text-muted' or ''}" title="Publish/Unpublish">
+                        <i class="fa fa-lg fa-globe"> </i>
+                    </span>
+                </a>
+            </a>
+        </field>
+    </record>
+    <!-- Website new content form -->
+    <record id="knowsystem_article_view_form_content_add" model="ir.ui.view">
+        <field name="name">knowsystem.article.view.form.add</field>
+        <field name="model">knowsystem.article</field>
+        <field name="priority">10000</field>
+        <field name="arch" type="xml">
+            <form js_class="website_new_content_form">
+                <group>
+                    <field name="website_url" invisible="1"/>
+                    <field name="editor_type" invisible="1"/>
+                    <field name="name"/>
+                    <field name="published_name"/>
+                    <field name="section_id" required="1"/>
+                    <field name="tag_ids" widget="many2many_tags"/>
+                    <field name="kanban_manual_description" widget="text"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="knowsystem_article_action_new_content_add" model="ir.actions.act_window">
+        <field name="name">New Article</field>
+        <field name="res_model">knowsystem.article</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="knowsystem_article_view_form_content_add"/>
+        <field name="context">{"default_editor_type": "website_editor"}</field>
+    </record>
+
+</odoo>
