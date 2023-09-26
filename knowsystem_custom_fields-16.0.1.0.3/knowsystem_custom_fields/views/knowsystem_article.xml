@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="knowsystem_article_view_search" model="ir.ui.view">
+        <field name="name">knowsystem.article.search</field>
+        <field name="model">knowsystem.article</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_view_search"/>
+        <field name="arch" type="xml">
+            <field name="tag_ids" position="after">
+                <field name="custom_type_id"/>
+            </field>
+        </field>
+    </record>
+    <record id="knowsystem_article_view_form_custom" model="ir.ui.view">
+        <field name="name">knowsystem.article.form.viewer.custom</field>
+        <field name="model">knowsystem.article</field>
+        <field name="inherit_id" ref="knowsystem.knowsystem_article_view_form_viewer"/>
+        <field name="arch" type="xml">
+            <field name="section_id" position="after">
+                <field name="custom_type_id" placeholder="type" class="col-lg-3 col-md-3 col-sm-12"/>
+            </field>
+            <field name="tag_ids" position="attributes">
+                <attribute name="class">col-lg-6 col-md-6 col-sm-12 pl16</attribute>
+            </field>
+            <div name="main_settings" position="after">
+                <group>
+                    <group name="left_panel_group" invisible="1"/>
+                    <group name="right_panel_group" invisible="1"/>
+                </group>
+            </div>
+            <page name="article_content" position="inside">
+                <group name="after_description_group" invisible="1"/>
+            </page>
+            <notebook position="inside">
+                <page name="custom_fields" string="Custom Details" invisible="0">
+                    <group name="group_custom_fields" invisible="1"/>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

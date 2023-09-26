@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="KnowNavigationPanel">
+        <t t-jquery="div#knowtours" t-operation="before">
+            <hr class="mb8 knowsystem_hr"/>
+            <div class="knowsystem_panel_header">
+                <span>
+                    Types <i class="fa fa-ban clear_types know_functional_button knowclear"></i>
+                </span>
+            </div>
+            <div class="knowsystem_panel_body">
+                <div id="know_types"/>
+            </div>
+            <div t-if="right_for_delete" class="knowsystem_panel_body mb24">
+                <span class="add_knownode_button pull-right" id="add_know_type">...add new type</span>
+            </div>
+        </t>
+    </t>
+
+</templates>

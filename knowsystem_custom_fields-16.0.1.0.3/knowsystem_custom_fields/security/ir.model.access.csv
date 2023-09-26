@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_custom_article_field,access_custom_article_field,model_custom_article_field,base.group_user,1,0,0,0
+access_custom_article_field_admin,access_custom_article_field_admin,model_custom_article_field,knowsystem.group_knowsystem_admin,1,1,1,1
+access_article_type_update,access_article_type_update,model_article_type_update,knowsystem.group_knowsystem_editor,1,1,1,1
