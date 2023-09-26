@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template inherit_id="knowsystem_website.knowsystem_article" id="knowsystem_article_custom" name="KnowSystem Article">
+        <div id="knowsystem_article_content" position="before">
+            <div class="col-md-12">
+                <div class="row">
+                    <div id="left_panel_group" class="col-12 col-md-6 pb-2"> </div>
+                    <div id="right_panel_group" class="col-12 col-md-6 pb-2"> </div>
+                </div>
+            </div>
+        </div>
+        <div id="knowsystem_article_content" position="after">
+            <div class="col-md-12 mt8">
+                <div id="after_descri" name="after_descri" class="col-12 col-lg-12 mb-4 mb-md-0"/>
+            </div>
+        </div>
+    </template>
+    <template id="know_types" inherit_id="knowsystem_website.sections" name="Custom Types Navigator" active="True" customize_show="True">
+        <div id="sections_panel" position="after">
+            <div class="col-md-12" t-if="type_ids and len(type_ids) != 2">
+                <ul class="nav nav-pills nav-stacked mt8">
+                    <li>Types</li>
+                </ul>
+                <div id="knowsystem_types" t-att-data-id="type_ids" t-if="type_ids"> </div>
+            </div>
+        </div>
+    </template>
+
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_article_custom_type_public,access_article_custom_type_public,knowsystem_custom_fields.model_article_custom_type,,1,0,0,0
