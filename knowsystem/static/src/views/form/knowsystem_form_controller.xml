@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="knowsystem.KnowSystemFormView" t-inherit="web.FormView" t-inherit-mode="primary" owl="1">
+        <xpath expr="//button[hasclass('o_form_button_create')]" position="after">
+            <button type="button" class="btn btn-outline-primary" t-on-click.stop="() => this.createFromTeplate()" t-att-disabled="state.isDisabled">
+                Create from template
+            </button>
+        </xpath>
+    </t>
+    <t t-name="knowsystem.KnowSystemFormViewButtons" t-inherit="web.FormView.Buttons" t-inherit-mode="primary" owl="1">
+        <xpath expr="//button[hasclass('o_form_button_create')]" position="after">
+            <button type="button" class="btn btn-secondary" t-on-click.stop="() => this.createFromTeplate()" t-att-disabled="state.isDisabled">
+                Create from template
+            </button>
+        </xpath>
+    </t>
+
+</templates>

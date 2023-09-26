@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Backend assets -->
+    <template id="knowsystem_iframe_css_assets_edit" groups="base.group_user">
+        <t t-call-assets="knowsystem.assets_editor" t-js="false"/>
+        <t t-call="knowsystem.knowsystem_style"/>
+        <t t-call-assets="knowsystem.assets_editor_edition" t-js="false"/>
+        <t t-call-assets="knowsystem.editor_ui" t-js="false"/>
+        <t t-call-assets="web.assets_common" t-js="false"/>
+        <t t-call-assets="web.assets_frontend" t-js="false"/>
+        <t t-call-assets="web_editor.assets_wysiwyg" t-js="false"/>
+    </template>
+    <!-- Website editor assets -->
+    <template id="knowsystem_iframe_css_assets_website" groups="base.group_user">
+        <t t-call-assets="knowsystem.editor_ui" t-js="false"/>
+        <t t-call-assets="web.assets_common" t-js="false"/>
+        <t t-call-assets="web.assets_frontend" t-js="false"/>
+    </template>
+    <!-- Implemented based on mass_mailing/data/mailing_data_templates.xml -->
+    <template id="knowsystem_style">
+        <style>
+            .o_layout * {
+                box-sizing: border-box !important;
+            }
+            .o_layout :not(.fa) {
+                font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+            }
+            html,
+            body {
+                margin: 0 auto !important;
+                padding: 0 !important;
+                height: 100% !important;
+                width: 100% !important;
+            }
+            * {
+                -ms-text-size-adjust: 100%;
+            }
+            table,
+            td {
+                mso-table-lspace: 0pt !important;
+                mso-table-rspace: 0pt !important;
+            }
+            img {
+                -ms-interpolation-mode:bicubic;
+            }
+            a {
+                text-decoration: none;
+            }
+            @media screen and (max-width: 768px) {
+                .knowsystem_snippet_general .container {
+                    width: 100% !important;
+                }
+            }
+            @media screen and (max-width: 1135px) {
+                td {
+                    max-width: inherit !important;
+                }
+                td > img:only-child {
+                    min-width: 100% !important;
+                }
+                .o_desktop_h100 {
+                    height: unset !important;
+                }
+            }
+        </style>
+    </template>
+
+</odoo>

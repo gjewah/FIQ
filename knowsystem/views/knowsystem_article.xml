@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="knowsystem_article_view_search" model="ir.ui.view">
+        <field name="name">knowsystem.article.search</field>
+        <field name="model">knowsystem.article</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" filter_domain="['|', ('name', 'ilike', self), ('indexed_description', 'ilike', self)]" string="Contents"/>
+                <field name="section_id"/>
+                <field name="tag_ids"/>
+                <field name="create_uid" string="Author"/>
+                <separator/>
+                <filter name="myarticles" string="My Articles" domain="[('create_uid', '=', uid)]"/>
+                <filter name="following" string="Following" domain="[('message_is_follower', '=', True)]"/>
+                <separator/>
+                <filter name="favorites" string="Favorite" domain="[('favourite_user_ids', 'in', uid)]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                <separator/>
+                <filter string="My Activities" name="activities_my" domain="[('activity_ids.user_id', '=', uid)]"/>
+                <separator/>
+                <filter string="Late Activities"
+                        name="activities_overdue"
+                        domain="[('activity_ids.date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <filter string="Today Activities"
+                        name="activities_today"
+                        domain="[('activity_ids.date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <filter string="Future Activities"
+                        name="activities_upcoming_all"
+                        domain="[('activity_ids.date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <separator/>
+            </search>
+        </field>
+    </record>
+    <record id="knowsystem_article_view_form_viewer" model="ir.ui.view">
+        <field name="name">knowsystem.article.form.viewer</field>
+        <field name="model">knowsystem.article</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <form js_class="knowsystem_form" class="o_knowsystem_form">
+                <div class="w-100">
+                    <div class="row">
+                        <h1><field name="name" placeholder="Article Title"/></h1>
+                    </div>
+                    <div class="row">
+                        <field name="published_name" placeholder="Published Title" class="w-100"/>
+                    </div>
+                    <div name="main_settings" class="row">
+                        <field name="section_id" placeholder="section" required="1" class="col-lg-3 col-md-3 col-sm-12"/>
+                        <field name="tag_ids"
+                               widget="many2many_tags"
+                               placeholder="tags"
+                               options="{'color_field': 'color'}"
+                               class="col-lg-9 col-md-9 col-sm-12 pl16"
+                        />
+                    </div>
+                </div>
+                <notebook>
+                    <page name="article_content" string="Content">
+                        <div class="w-100 mb4">
+                            <field name="kanban_manual_description" placeholder="preview text" widget="text"/>
+                        </div>
+                        <field name="description_arch" widget="knowsystemEditor" options="{'allowCommandVideo': true}"/>
+                    </page>
+                    <page name="tech" string="Tech" invisible="1">
+                        <!-- we apply the widget text to avoid any manipulations of the HTML field -->
+                        <field name="description" readonly="0" widget="text"/>
+                        <field name="editor_type"/>
+                        <field name="stable"/>
+                    </page>
+                    <page name="knowsystem_attachments" string="Attachments">
+                        <div class="w-100 mt16">
+                            <field name="attachment_ids" widget="many2many_binary" string="Attach a file" class="w-100"/>
+                        </div>
+                    </page>
+                    <page string="Discussion" attrs="{'invisible': [('stable', '=', False)]}">
+                        <div name="discussion_details" class="w-100">
+                            <group class="w-100 mb32" name="url">
+                                <field name="internal_url" widget="CopyClipboardURL"/>
+                            </group>
+                            <div class="w-100 text-center" name="likes">
+                                <field name="likes_number"
+                                       widget="likeButtonField"
+                                       icon="fa fa-thumbs-up"
+                                       action="action_like_the_article"
+                                       like_state="like"
+                                />
+                                <field name="dislikes_number"
+                                       widget="likeButtonField"
+                                       icon="fa fa-thumbs-down"
+                                       action="action_dislike_the_article"
+                                       like_state="dislike"
+                                />
+                                <field name="this_user_like_state" invisible="1"/>
+                                <field name="this_user_favorite" widget="favoriteButtonField" class="ml4"/>
+                            </div>
+                        </div>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids"/>
+                            <field name="activity_ids"/>
+                            <field name="message_ids"/>
+                        </div>
+                    </page>
+                    <page string="Revisions" groups="knowsystem.group_knowsystem_editor" attrs="{'invisible': [('revision_ids', '=', [])]}">
+                        <field name="revision_ids" widget="revisionsTable" class="w-100"/>
+                    </page>
+                    <page string="Access Rights" groups="knowsystem.group_knowsystem_editor">
+                        <group>
+                            <field name="user_group_ids"
+                                   widget="many2many_tags"
+                                   options="{'no_create_edit': 1, 'no_quick_create': 1}"
+                            />
+                            <field name="edit_user_group_ids"
+                                   widget="many2many_tags"
+                                   options="{'no_create_edit': 1, 'no_quick_create': 1}"
+                            />
+                        </group>
+                    </page>
+                    <page string="Info" groups="knowsystem.group_knowsystem_editor" attrs="{'invisible': [('stable', '=', False)]}">
+                        <group name="settings" string="Settings">
+                            <field name="active_till"/>
+                        </group>
+                        <group name="contributions" string="Contributions">
+                            <field name="create_uid" string="Author" readonly="1"/>
+                            <field name="create_date" string="Published on" readonly="1"/>
+                            <field name="write_revision_uid" string="Last revision by" readonly="1"/>
+                            <field name="write_revision_date" string="Last revision on" readonly="1"/>
+                            <field name="contributor_ids" widget="many2many_tags" readonly="1"/>
+                            <field name="active" invisible="1"/>
+                        </group>
+                        <group name="stats" string="Statistics">
+                            <field name="views_number_internal" readonly="1"/>
+                            <field name="view_stat_ids" widget="many2many_tags" readonly="1"/> 
+                            <field name="used_in_email_compose" readonly="1"/>
+                            <field name="favourite_user_ids" widget="many2many_tags" readonly="1"/>
+                            <field name="likes_number" readonly="1"/>
+                            <field name="like_user_ids" widget="many2many_tags" readonly="1"/>
+                            <field name="dislikes_number" readonly="1"/>
+                            <field name="dislike_user_ids" widget="many2many_tags" readonly="1"/>
+                        </group>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+    <record id="knowsystem_article_view_quick_search" model="ir.ui.view">
+        <field name="name">knowsystem.article.form.quick.search</field>
+        <field name="model">knowsystem.article</field>
+        <field name="priority">2000</field>
+        <field name="arch" type="xml">
+            <form js-class="knowsystem_form" class="o_knowsystem_form" create="0" edit="0" delete="0">
+                <div class="row">
+                    <h1><field name="name"/></h1>
+                </div>
+                <div class="row">
+                    <field name="tag_ids"
+                           widget="many2many_tags"
+                           placeholder="tags"
+                           options="{'color_field': 'color'}"
+                           class="col-lg-12 col-md-12 col-sm-12 pl16"
+                    />
+                </div>
+                <notebook>
+                    <page name="article_content" string="Content">
+                        <div class="w-100 mb4">
+                            <field name="kanban_manual_description" placeholder="preview text" widget="text"/>
+                        </div>
+                        <field name="description_arch" widget="knowsystemEditor" options="{'allowCommandVideo': true}"/>
+                    </page>
+                    <page name="tech" string="Readonly" invisible="1">
+                        <!-- we apply the widget text to avoid any manipulations of the HTML field -->
+                        <field name="description" readonly="0" widget="text"/>
+                        <field name="editor_type"/>
+                        <field name="stable"/>
+                    </page>
+                    <page name="knowsystem_attachments" string="Attachments">
+                        <div class="w-100 mt16">
+                            <field name="attachment_ids" widget="many2many_binary" string="Attach a file" class="w-100"/>
+                        </div>
+                    </page>
+                    <page string="Sharing">
+                        <div name="discussion_details" class="w-100">
+                            <group class="w-100 mb32" name="url">
+                                <field name="internal_url" widget="CopyClipboardURL"/>
+                            </group>
+                        </div>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+    <record id="knowsystem_article_view_kanban" model="ir.ui.view">
+        <field name="name">knowsystem.article.kanban</field>
+        <field name="model">knowsystem.article</field>
+        <field name="arch" type="xml">
+            <kanban js_class="knowsystem_kanban" class="jstr-kanban-view">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="section_id"/>
+                <field name="tag_ids"/>
+                <field name="kanban_manual_description"/>
+                <field name="kanban_description"/>
+                <field name="favourite_user_ids"/>
+                <field name="likes_number"/>
+                <field name="dislikes_number"/>
+                <field name="views_number_internal"/>
+                <field name="this_user_like_state"/>
+                <field name="activity_ids"/>
+                <field name="activity_state" />
+                <field name="create_uid"/>
+                <field name="write_revision_date"/>
+                <field name="create_date"/>
+                <field name="color"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click" t-attf-class="#{kanban_color(record.color.raw_value)}">
+                            <div class="oe_kanban_details d-flex flex-column justify-content-between jstr-kanban-card">
+                                <div class="jstr-kanban-body">
+                                    <div class="o_kanban_record_title">
+                                        <div class="jstr-pull-right jstr-kanban-select-box">
+                                            <i class="fa fa-lg fa-square-o jstr-hide-mobile jstr-hide-tablet jstr-pull-right">
+                                            </i>
+                                            <i class="fa fa-lg fa-check-square-o jstr-hide-mobile jstr-hide-tablet jstr-pull-right">
+                                            </i>
+                                        </div>
+                                        <strong class="jstr-overalyed">
+                                            <field name="name"/>
+                                        </strong>
+                                    </div>
+                                    <div class="jstr-kanban-main-details jstr-hide-mobile">
+                                        <div name="knowsystem_section" class="col-2 jstr-kanban-knowsystem-section" title="Article section">
+                                            <i class="fa fa-sliders"> <field name="section_id"/> </i>
+                                        </div>
+                                        <div class="col-10" t-if="record.tag_ids.raw_value.length" name="knowsystem_tags" title="Article tags">
+                                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                        </div>
+                                    </div>
+                                    <div class="jstr-kanban-description">
+                                        <t t-if="record.kanban_manual_description.raw_value and record.kanban_manual_description.raw_value != '' and record.kanban_manual_description.raw_value != 'false'">
+                                           <t t-out="record.kanban_manual_description.raw_value"/>
+                                        </t>
+                                        <t t-else="">
+                                            <field name="kanban_description"/>
+                                        </t>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_card_manage_pane dropdown-menu" role="menu" groups="base.group_user">
+                                    <div class="o_kanban_card_manage_settings row mr0 mt0 ml0">
+                                        <div role="menuitem" aria-haspopup="true" class="col-12">
+                                            <ul class="oe_kanban_colorpicker" data-field="color" role="popup"/>
+                                        </div>
+                                        <div role="menuitem" class="col-12">
+                                            <a class="dropdown-item jstr-dropdown-item" role="menuitem" type="edit">Open</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_bottom jstr-kanban-bottom">
+                                    <div class="oe_kanban_bottom_left">
+                                        <a class="o_kanban_manage_toggle_button" href="#" groups="base.group_user">
+                                            <i class="fa fa-ellipsis-v" role="img" aria-label="Change Color" title="Change color"/>
+                                        </a>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right" style="overflow:hidden;">
+                                        <span class="jstr-kanban-bottom-info mr16 mt4 jstr-hide-mobile jstr-hide-tablet">
+                                            <img t-att-src="kanban_image('res.users', 'image_128', record.create_uid.raw_value)"
+                                                 t-attf-title="Author: #{record.create_uid.value}"
+                                                 t-att-alt="record.create_uid.value"
+                                                 width="24"
+                                                 height="24"
+                                                 class="oe_kanban_avatar mr4"
+                                            />
+                                            <span title="Last revision on">
+                                                <field name="write_revision_date" widget="date"/>
+                                            </span>
+                                            <span title="Published on">
+                                                (<field name="create_date" widget="date"/>)
+                                            </span>
+                                        </span>
+                                        <span class="jstr-kanban-bottom-action" title="Number of views">
+                                            <i class="fa fa-lg fa-eye"> <field name="views_number_internal"/></i>
+                                        </span>
+                                        <a type="object" name="action_like_the_article" class="jstr-kanban-bottom-action" title="Like">
+                                            <span id="knowlike" t-attf-class="#{record.this_user_like_state.raw_value == 'like' and 'text-muted' or ''}">
+                                                <i class="fa fa-lg fa-thumbs-up"> <field name="likes_number"/></i>
+                                            </span>
+                                        </a>
+                                        <a type="object" name="action_dislike_the_article" class="jstr-kanban-bottom-action" title="Dislike">
+                                            <span id="knowdislike" t-attf-class="#{record.this_user_like_state.raw_value == 'dislike' and 'text-muted' or ''}">
+                                                <i class="fa fa-lg fa-thumbs-down"> <field name="dislikes_number"/></i>
+                                            </span>
+                                        </a>
+                                        <a type="object" name="action_toggle_favorite" t-attf-class="fa fa-lg fa-star#{(record.favourite_user_ids.raw_value.indexOf(user_context.uid) &lt; 0)? '-o' : ''} jstr-kanban-bottom-action" title="Favorite"
+                                        > </a>
+                                        <field name="activity_ids" widget="kanban_activity"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <record id="knowsystem_article_action" model="ir.actions.act_window">
+        <field name="name">KnowSystem</field>
+        <field name="res_model">knowsystem.article</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="search_view_id" eval="knowsystem_article_view_search"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create pull-right">Click 'Create' to add a new article</p>
+        </field>
+    </record>
+    <record id="knowsystem_article_action_form_only" model="ir.actions.act_window">
+        <field name="name">KnowSystem</field>
+        <field name="res_model">knowsystem.article</field>
+        <field name="view_mode">form</field>
+    </record>
+    <record id="knowsystem_article_view_tree" model="ir.ui.view">
+        <field name="name">knowsystem.article.tree</field>
+        <field name="model">knowsystem.article</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="section_id"/>
+                <field  name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

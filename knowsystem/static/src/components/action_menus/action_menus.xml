@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-inherit="web.ActionMenus" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_cp_action_menus')]" position="inside">
+            <div class="btn-group o_dropdown" t-if="knowsystemTurn">
+                <button type="button"
+                        class="o_dropdown_toggler_btn btn btn-secondary"
+                        t-on-click.prevent="() => this._onKMSSearch()"
+                        title="KnowSystem"
+                >
+                    <i class="fa fa-superpowers"> </i>
+                </button>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

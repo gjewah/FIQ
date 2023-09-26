@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="knowsystem.KnowSystemEditor" owl="1">
+        <div class="knowsystem-editor">
+            <div class="knowsystem-editor-header w-100">
+                <div name="knowsystem_editor_selectors" class="knowsystem-editor-editor-type-box w-50">
+                    <select class="knowsystem-selection mt4 ml8 w-50 jstr-hide-mobile jstr-hide-tablet" t-if="!props.readonly and this.state.readonly" t-on-change="(event) => this._onChangeEditor(event)">
+                        <t t-foreach="state.editorsTypes" t-as="editorChoice" t-key="editorChoice.id">
+                            <option t-att-value="editorChoice.id" t-attf-selected="#{editorChoice.id == state.editorType and 'selected' or undefined}">
+                                <t t-out="editorChoice.name"/>
+                            </option>
+                        </t>
+                    </select>
+                </div>
+                <div t-attf-class="knowsystem-editor-btn-box  text-right #{!props.readonly and 'w-50' or 'w-100'}">
+                    <div class="jstr-pull-right">
+                        <t t-if="!props.readonly">
+                            <a class="btn btn-primary btn-sm mt4 mb4 ml4 mr4 jstr-hide-mobile jstr-hide-tablet" t-on-click="() => this.onSwitchEdit()" t-if="this.state.readonly">
+                                <i class="fa fa-edit"> Edit</i>
+                            </a>
+                            <a class="btn btn-primary btn-sm mt4 mb4 ml4 mr4 jstr-hide-mobile jstr-hide-tablet" t-on-click="() => this.onOpenAceEditor()" t-if="this.state.readonly and state.editorType != 'text'">
+                                <i class="fa fa-code"> Edit Source Code</i>
+                            </a>
+                            <a name="discard_btn" class="btn btn-primary btn-sm mt4 mb4 ml4 mr4 jstr-hide-mobile jstr-hide-tablet" t-on-click="() => this.onDiscardEdit()" t-if="!this.state.readonly">
+                                <i class="fa fa-save"> Discard</i>
+                            </a>
+                            <a class="btn btn-primary btn-sm mt4 mb4 ml4 mr4 jstr-hide-mobile jstr-hide-tablet" t-on-click="() => this.onSwitchReadOnly()" t-if="!this.state.readonly">
+                                <i class="fa fa-save"> Save</i>
+                            </a>
+                        </t>
+                        <a class="btn btn-primary btn-sm mt4 mb4 ml4 mr4" t-on-click="() => this.onCopy()" t-if="this.state.readonly and state.editorType == 'text'">
+                            <i class="fa fa-copy"> Copy to Clipboard</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="knowsystem-editor-readonly w-100" t-if="this.state.readonly">
+                <div class="knowsystem-editor-iframe">
+                    <HtmlField t-props="this._getReadonlyProps()"/>
+                </div>
+            </div>
+            <div class="knowsystem-editor-edit w-100" t-if="!this.state.readonly">
+                <div>
+                    <t t-if="this.state.aceEditor">
+                        <AceField t-props="this._getEditProps()"/>
+                    </t>
+                    <t t-else="">
+                        <t t-if="state.editorType == 'backend_editor'">
+                            <KnowSystemHtml t-props="this._getEditProps()"/>
+                        </t>
+                        <t t-elif="state.editorType == 'html'">
+                            <HtmlField t-props="this._getEditProps()"/>
+                        </t>
+                        <t t-elif="state.editorType == 'text'">
+                            <TextField t-props="this._getEditProps()"/>
+                        </t>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

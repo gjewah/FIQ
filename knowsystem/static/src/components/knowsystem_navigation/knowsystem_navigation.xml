@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    
+    <t t-name="knowsystem.KnowSystemNavigation" owl="1">
+        <div class="jstr-navigation-panel jstr-hide-mobile jstr-hide-tablet">
+            <div class="jstr-panel-content">
+                <div class="jstr-panel-header">
+                    <div class="jstr-d-flex">
+                        <div>
+                            Sort by
+                        </div>
+                        <div class="jstr-sort-div">
+                            <select class="jstr-sort-option" t-on-change="(event) => this._onApplySorting(event)">
+                                <option value="views_number_internal">Views</option>
+                                <option value="likes_score">Likes</option>
+                                <option value="name">Title</option>
+                                <option value="create_date">Created Date</option>
+                                <option value="write_revision_date">Write Date</option>
+                                <option value="section_id">Section</option>
+                                <option value="create_uid">Author</option>
+                            </select>
+                        </div>
+                        <div>
+                            <i class="fa fa-exchange jstr-functional-button jstr-functional-button-clear" t-on-click.prevent="() => this._onApplyReverseSorting()"></i>
+                        </div>
+                    </div>
+                    <div class="pt8">
+                        <span class="jstr-functional-button" t-on-click.prevent="() => this._onSelectAll()">
+                            Select all found
+                        </span>
+                    </div>
+                </div>
+                <KnowSystemJsTreeContainer t-props="getJsTreeProps('sections')"/>
+                <KnowSystemJsTreeContainer t-props="getJsTreeProps('tags')"/>
+                <KnowSystemJsTreeContainer t-props="getJsTreeProps('types')"/>
+                <KnowSystemLearningTours t-props="getToursProps()"/>
+            </div>
+        </div>
+    </t>
+
+</templates>

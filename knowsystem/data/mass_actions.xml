@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Save as PDF -->
+        <record id="knowsystem_article_save_as_pdf" model="ir.actions.server">
+            <field name="name">Save as PDF</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    action = records.action_save_as_pdf()
+            </field>
+            <field name="binding_model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="binding_view_types">form</field>
+            <field name="safe_kms_action">True</field>
+        </record>
+        <!-- Trigger the wizard to update internal section -->
+        <record id="knowsystem_article_update_category" model="ir.actions.server">
+            <field name="name">Update section</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+action = env.ref("knowsystem.knowsystem_update_section_action").sudo().read()[0]
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_editor'))]"/>
+            <field name="binding_view_types">list</field>
+        </record>
+        <!-- Trigger the wizard to update tags -->
+        <record id="knowsystem_article_update_tags" model="ir.actions.server">
+            <field name="name">Update tags</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+action = env.ref("knowsystem.knowsystem_update_tags_action").sudo().read()[0]
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_editor'))]"/>
+            <field name="binding_view_types">list</field>
+        </record>
+        <!-- Trigger the wizard to update article access groups -->
+        <record id="knowsystem_article_update_groups" model="ir.actions.server">
+            <field name="name">Update access groups</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+action = env.ref("knowsystem.knowsystem_update_groups_action").sudo().read()[0]
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_editor'))]"/>
+            <field name="binding_view_types">list</field>
+        </record>
+        <!-- Trigger the wizard to add to the tour -->
+        <record id="knowsystem_article_add_to_tour" model="ir.actions.server">
+            <field name="name">Add to tour</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+action = env.ref("knowsystem.knowsystem_add_to_tour_action").sudo().read()[0]
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_learning_tours'))]"/>
+        </record>
+        <!-- Archive -->
+        <record id="knowsystem_article_archive" model="ir.actions.server">
+            <field name="name">Archive</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    records.write({"active": False})
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_editor'))]"/>
+            <field name="binding_view_types">list</field>
+        </record>
+        <!-- Add to favorite -->
+        <record id="knowsystem_article_add_to_favorite" model="ir.actions.server">
+            <field name="name">Add to favorite</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    records.sudo().write({"favourite_user_ids": [(4, env.user.id)]})
+            </field>
+            <field name="binding_view_types">list</field>
+            <field name="safe_kms_action">True</field>
+        </record>
+        <!-- Follow -->
+        <record id="knowsystem_article_follow" model="ir.actions.server">
+            <field name="name">Follow</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    partner_id = env.user.partner_id.ids
+    records.sudo().message_subscribe(partner_ids=partner_id)
+            </field>
+            <field name="binding_view_types">list</field>
+            <field name="safe_kms_action">True</field>
+        </record>
+        <!-- Unfollow -->
+        <record id="knowsystem_article_unfollow" model="ir.actions.server">
+            <field name="name">Unfollow</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    partner_id = env.user.partner_id.ids
+    records.sudo().message_unsubscribe(partner_ids=partner_id)
+            </field>
+            <field name="binding_view_types">list</field>
+            <field name="safe_kms_action">True</field>
+        </record>
+        <!-- Duplicate -->
+        <record id="knowsystem_article_duplicate" model="ir.actions.server">
+            <field name="name">Duplicate</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+for record in records:
+    record.copy()
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_editor'))]"/>
+            <field name="binding_view_types">list</field>
+        </record>
+        <!-- Restore -->
+        <record id="knowsystem_article_restore" model="ir.actions.server">
+            <field name="name">Restore</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    records.write({"active": True})
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_editor'))]"/>
+            <field name="binding_view_types">list</field>
+        </record>
+        <!-- Delete -->
+        <record id="knowsystem_article_delete" model="ir.actions.server">
+            <field name="name">Delete</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    records.unlink()
+            </field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_admin'))]"/>
+            <field name="binding_view_types">list</field>
+        </record>
+        <!-- Trigger the knowsystem.article.template with the default descriptionss -->
+        <record id="knowsystem_article_make_template" model="ir.actions.server">
+            <field name="name">Make Template</field>
+            <field name="model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    if len(records) == 1:
+        action = env.ref("knowsystem.knowsystem_article_template_action_only_form").sudo().read()[0]
+        action.update({
+            "context": {
+                "default_description": record.description,
+                "default_description_arch": record.description_arch,
+                "default_editor_type": record.editor_type,                
+            }
+        })
+    else:
+        vals_list = []
+        for record in records:
+            vals_list.append({
+                "name": "{} (Template)".format(record.name),
+                "description": record.description,
+                "description_arch": record.description_arch,
+                "editor_type": record.editor_type,
+            })
+        env["knowsystem.article.template"].create(vals_list)
+        action = env.ref("knowsystem.knowsystem_article_template_action").sudo().read()[0]
+            </field>
+            <field name="binding_model_id" ref="knowsystem.model_knowsystem_article"/>
+            <field name="binding_view_types">form</field>
+            <field name="groups_id" eval="[(4, ref('knowsystem.group_knowsystem_editor'))]"/>
+        </record>
+    </data>
+
+</odoo>

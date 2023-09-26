@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+     <record id="article_section_update_form_view" model="ir.ui.view">
+        <field name="name">article.section.update.form.view</field>
+        <field name="model">article.section.update</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="article_ids" widget="many2many_tags" invisible="1"/>
+                    <field name="section_id"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="knowsystem_update_section_action" model="ir.actions.act_window">
+        <field name="name">Update Section</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">article.section.update</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="knowsystem.article_section_update_form_view"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

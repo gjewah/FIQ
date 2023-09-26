@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="knowsystem.FavoriteButtonField" owl="1">
+        <div>
+            <a t-attf-class="btn fa fa-star#{!this.props.value and '-o' or ''}" t-on-click="() => this.toggleFavorite()"/>
+        </div>
+    </t>
+
+</templates>

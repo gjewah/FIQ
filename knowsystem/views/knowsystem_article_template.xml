@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="knowsystem_article_template_view_search" model="ir.ui.view">
+        <field name="name">knowsystem.article.template.search</field>
+        <field name="model">knowsystem.article.template</field>
+        <field name="arch" type="xml">
+            <search>
+               <field name="name"/>
+               <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+            </search>
+        </field>
+    </record>
+    <record id="knowsystem_article_template_view_form" model="ir.ui.view">
+        <field name="name">knowsystem.article.template.form</field>
+        <field name="model">knowsystem.article.template</field>
+        <field name="arch" type="xml">
+            <form js_class="knowsystem_form" class="o_knowsystem_form">
+                <header>
+                    <button name="%(knowsystem.knowsystem_article_action_form_only)d"
+                            type="action"
+                            context="{'default_editor_type': editor_type, 'default_description': description, 'default_description_arch': description_arch}"
+                            class="btn btn-primary"
+                            string="Create article"
+                    />
+                </header>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" placeholder="Reference" class="oe_inline"/>
+                    </h1>
+                </div>
+                <notebook>
+                    <page string="Content">
+                        <field name="description_arch" widget="knowsystemEditor" options="{'allowCommandVideo': true}"/>
+                    </page>
+                    <page name="tech" string="Tech" invisible="1">
+                        <!-- we apply the widget text to avoid any manipulations of the HTML field -->
+                        <field name="description" readonly="0" widget="text"/>
+                        <field name="editor_type"/>
+                        <field name="stable"/>
+                        <field name="create_uid"/>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+    <record id="knowsystem_article_template_view_tree" model="ir.ui.view">
+        <field name="name">knowsystem.article.template.tree</field>
+        <field name="model">knowsystem.article.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="knowsystem_article_template_action" model="ir.actions.act_window">
+        <field name="name">Templates</field>
+        <field name="res_model">knowsystem.article.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" eval="knowsystem_article_template_view_search"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click "Create" to add a new article template</p>
+        </field>
+    </record>
+    <record id="knowsystem_article_template_action_only_form" model="ir.actions.act_window">
+        <field name="name">Template</field>
+        <field name="res_model">knowsystem.article.template</field>
+        <field name="view_mode">form</field>
+    </record>
+
+</odoo>

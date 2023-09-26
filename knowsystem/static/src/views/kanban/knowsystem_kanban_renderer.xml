@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    
+    <t t-name="knowsystem.KnowSystemsKanbanRenderer" t-inherit="web.KanbanRenderer" t-inherit-mode="primary" owl="1">
+        <xpath expr="//div[hasclass('o_kanban_renderer')]" position="before">
+            <KnowSystemNavigation t-props="getKnowSystemNavigationProps()"/>
+        </xpath>
+        <xpath expr="//div[hasclass('o_kanban_renderer')]" position="after">
+            <KnowSystemManager t-props="getKnowSystemManagerProps()"/>
+        </xpath>
+    </t>
+
+</templates>

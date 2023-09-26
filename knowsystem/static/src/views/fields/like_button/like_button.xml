@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="knowsystem.LikeButtonField" owl="1">
+        <div>
+            <a t-attf-class="btn #{props.icon} #{props.likeState == this.thisLikeState and 'text-muted' or 'text-info'}" t-on-click="() => this.toggleLike()"/>
+            <span t-esc="formattedValue"/>
+        </div>
+    </t>
+
+</templates>

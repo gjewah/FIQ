@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="knowsystem.SystrayQuickLink" owl="1">
+        <t t-if="knowsystemTurn">
+            <a class="dropdown-toggle o-no-caret o-dropdown--narrow" title="KnowSystem" href="#" role="button" t-on-click="() => this._onKMSSearch()">
+                <i class="fa fa-lg fa-superpowers" role="img" aria-label="KnowSystem"/>
+            </a>
+        </t>
+    </t>
+
+</templates>

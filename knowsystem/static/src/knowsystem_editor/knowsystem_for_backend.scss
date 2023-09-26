@@ -1,0 +1,95 @@
+$o-ks-def-color-2: #ffffff;
+$o-ks-code-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$o-ks-def-color-4: #464646;
+
+.kms_standard_footer { margin-top: 300px !important }
+.oe_kms_structure { width: 100% !important }
+
+.knowsystem_layout {
+    // remove borders unless the snippets do not assume those explicitly
+    tbody, thead, tfoot, tr, td, th { border: none !important }
+
+    text-align: center !important;
+    min-width: 720px !important; // for the mail thread widget to avoid breaking columns
+
+    .knowsystem_wrapper {
+        text-align: center !important;
+        
+        .knowsystem_wrapper_print_td { // to make the correct printing only 
+            tr, td, table, tbody, p, h1, h2, h3, h4, h5, h6, div {
+                page-break-inside: avoid !important;
+            }
+        }
+
+        .knowsystem_wrapper_td {
+            text-align: center !important;
+
+            /* Show knowsystem snippets correctly in threads, in reports, and on website */
+            .knowsystem_snippet_general {
+                text-align: left !important;
+
+                .container {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                .card {
+                    .card-header,.card-footer { background-color: inherit !important }
+                    .card-body { background-color: white !important }
+                }
+                table.card { display: inline-table }
+                .knowsystem_code {
+                    font-family: $o-ks-code-font;
+                    color: $o-ks-def-color-2;
+                    padding-left: 16px;
+                }
+                .knowsystem_alert {
+                    border-width: 1px;
+                    border-style: solid;
+                    border-radius: .25rem;
+                    p, ul, ol {
+                        &:last-child { margin-bottom: 0 }
+                    }
+                    &_sm {
+                        padding: 10px;
+                        font-size: 14px;
+                    }
+                    &_md {
+                        padding: 15px;
+                        font-size: 16px;
+                    }
+                    &_lg {
+                        padding: 30px;
+                        font-size: 18px;
+                    }
+                    &_icon {
+                        float: left;
+                        margin-right: 10px;
+                        padding-top: 8px;
+                    }
+                    &_content {
+                        overflow: hidden;
+                    }
+                }
+                .knowsystem_text_highlight {
+                    padding-right: 16px;
+                    padding-left: 16px;
+                }
+                .knowsystem_media_col {
+                    padding-left: 16px !important;
+                    padding-right: 16px !important;
+                }
+            }
+            .s_hr {
+                line-height: 0;
+                hr {
+                    padding: 0 !important;
+                    border: 0 !important;
+                    border-top: 1px solid $o-ks-def-color-4 !important;
+                    margin: 0 !important;
+                    color: inherit !important;
+                    opacity: 0.25;
+                }
+            }
+        }
+    }
+}

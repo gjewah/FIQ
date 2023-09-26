@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="knowsystem.RevisionsTable" owl="1">
+        <div class="w-100 knowsystem-revisions">
+            <t t-if="state.revisionsList.length == 0">
+                There are no revisions yet
+            </t>
+            <t t-else="">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="knowsystem-revision-column">Revision</th>
+                            <th class="knowsystem-revision-column">Title</th>
+                            <th class="knowsystem-revision-column">Contents</th>
+                            <th class="knowsystem-revision-column">Preview</th>
+                            <th class="knowsystem-revision-column">Section</th>
+                            <th class="knowsystem-revision-column">Tags</th>
+                            <th class="knowsystem-revision-column">Files</th>
+                        </tr>
+                    </thead>
+                    <t t-foreach="state.revisionsList" t-as="revision" t-key="revision.id">
+                        <tr class="knowsystem-revision-line" title="Click to observe" t-on-click="() => this.onObserve(revision.id)">
+                            <td>
+                                <div>
+                                    By <t t-out="revision.author_id"/> on <t t-out="revision.published_date_str"/>
+                                </div>
+                            </td>
+                            <td>
+                                <t t-if="revision.name">
+                                    <t t-out="revision.name"/>
+                                </t>
+                            </td>
+                            <td>
+                                <t t-if="revision.description">
+                                    <span t-attf-class="#{((revision.description &gt; 0) ? 'text-success' : 'text-danger')}">
+                                        <t t-out="revision.description"/>
+                                    </span>
+                                </t>
+                            </td>
+                            <td>
+                                <t t-if="revision.kanban_manual_description">
+                                    <span t-attf-class="#{((revision.kanban_manual_description &gt; 0) ? 'text-success' : 'text-danger')}">
+                                        <t t-out="revision.kanban_manual_description"/>
+                                    </span>
+                                </t>
+                            </td>
+                            <td>
+                                <t t-if="revision.section_id">
+                                    <t t-out="revision.section_id"/>
+                                </t>
+                            </td>
+                            <td>
+                                <t t-if="revision.tag_ids">
+                                    <t t-out="revision.tag_ids"/>
+                                </t>
+                            </td>
+                            <td>
+                                <t t-if="revision.attachment_ids">
+                                    <t t-out="revision.attachment_ids"/>
+                                </t>
+                            </td>
+                        </tr>
+                    </t>
+                </table>
+            </t>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="knowsystem.KnowSystemLearningTours" owl="1">
+        <t t-if="state.toursData and (state.toursData.length != 0 or props.canCreate)">
+            <hr class="mb8 jstr-hr"/>
+            <div class="jstr-panel-header">
+                Tours
+            </div>
+            <div class="jstr-panel-body-selection pt0">
+                <div t-if="state.toursData.length != 0">
+                    <t t-foreach="state.toursData" t-as="tour" t-key="tour.id">
+                        <div class="pt4">
+                            <span class="jstr-functional-button" 
+                                  t-on-click.prevent="() => this._onTourStart(tour.id)"
+                                  t-on-contextmenu.prevent="() => this._onEditTour(tour.id)"
+                            >
+                                <i class="fa fa-play mr4"></i><t t-out="tour.name"/>
+                            </span>
+                        </div>
+                    </t>
+                </div>
+                <div class="jstr-panel-body mb24" t-if="props.canCreate">
+                    <span class="jstr-functional-button jstr-pull-right mr16" t-on-click.prevent="() => this._onOpenTour()">... add</span>
+                </div>
+            </div>
+        </t>
+    </t>
+
+</templates>
