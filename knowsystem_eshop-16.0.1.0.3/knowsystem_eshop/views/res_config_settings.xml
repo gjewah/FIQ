@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.cloud.knowsystem.eshop</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="knowsystem_website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="kms_last_div" position="after">
+                <h2 attrs="{'invisible': [('module_knowsystem_eshop', '=', False)]}">
+                    eCommerce FAQ Options
+                </h2>
+                <div class="row app_settings_header my-0 ms-0 mw-100 bg-warning bg-opacity-25" attrs="{'invisible': [('module_knowsystem_eshop', '=', False)]}">
+                    <div class="col-xs-12 col-md-6 ms-0 o_setting_box">
+                        <div class="o_setting_right_pane border-start-0 ms-0 ps-0">
+                            <div class="content-group">
+                                <div class="row flex-row flex-nowrap mt8 align-items-center">
+                                    <label class="col ps-0 text-nowrap" string="You are configuring eCommerce FAQ for the website:" for="faq_website_id"/>
+                                    <field name="faq_website_id" options="{'no_open': True, 'no_create': True}" title="Select website to configure eCommerce FAQ"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="knowsystem_eshop_options" class="row mt16 o_settings_container" attrs="{'invisible': [('module_knowsystem_eshop', '=', False)]}">
+                    <div id="knowsystem_eshop_type" class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('faq_website_id', '=', False)]}">
+                        <div name="knowsystem_eshop_type_1" class="o_setting_left_pane"> </div>
+                        <div name="knowsystem_eshop_type_2" class="o_setting_right_pane">
+                            <label for="knowsystem_eshop_type"/>
+                            <div name="know_website_option_hint" class="text-muted">
+                                Select how to show FAQ on product eCommerce pages: as a popup with all found articles, as a link to the full-featured portal navigation, or not show them at all
+                            </div>
+                            <field name="knowsystem_eshop_type" options="{'no_create_edit': 1, 'no_quick_create': 1}" class="w-100"/>
+                        </div>
+                    </div>
+                    <div id="knowsystem_faq_style_options" class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('faq_website_id', '=', False)]}">
+                        <div name="knowsystem_faq_style_option_1" class="o_setting_left_pane"> </div>
+                        <div name="knowsystem_faq_style_option_2" class="o_setting_right_pane">
+                            <label for="knowsystem_faq_style"/>
+                            <div name="knowsystem_faq_style_option_hint" class="text-muted">
+                                Define how the FAQ entry on the product eCommerce page should look like. Simple HTML tags are allowed
+                            </div>
+                            <field name="knowsystem_faq_style" class="w-100"/>
+                        </div>
+                    </div>
+                    <div name="knowsystem_eshop_filters" class="col-12 col-lg-12 o_setting_box" attrs="{'invisible': [('faq_website_id', '=', False)]}">
+                        <div name="knowsystem_eshop_filters_1" class="o_setting_left_pane"></div>
+                        <div name="knowsystem_eshop_filters_2" class="o_setting_right_pane">
+                            <label for="knowsystem_faq_section_ids" string="Global FAQ"/>
+                            <div name="duplicates_hint" class="text-muted">
+                                Select criteria to find articles that would be used as FAQ for <b><u>all</u></b> products of this website
+                            </div>
+                            <group class="w-100">
+                                <field name="knowsystem_faq_section_ids"
+                                       widget="many2many_tags"
+                                       options="{'no_quick_create': True, 'no_create': True, 'no_edit': True}"
+                                       class="w-100"
+                                />
+                                <field name="knowsystem_faq_tag_ids"
+                                       widget="many2many_tags"
+                                       options="{'color_field': 'color', 'no_quick_create': True, 'no_create': True, 'no_edit': True}"
+                                       class="w-100"
+                                />
+                                <field name="knowsystem_faq_article_ids"
+                                       widget="many2many_tags"
+                                       options="{'no_quick_create': True, 'no_create': True, 'no_edit': True}"
+                                       class="w-100"
+                                />
+                            </group>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+
+</odoo>

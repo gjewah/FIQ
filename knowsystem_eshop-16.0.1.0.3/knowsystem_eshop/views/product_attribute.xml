@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <record id="product_attribute_view_form_knowsystem" model="ir.ui.view">
+        <field name="name">product.attribute.form.knowsystem</field>
+        <field name="model">product.attribute</field>
+        <field name="inherit_id" ref="product.product_attribute_view_form"/>
+        <field name="arch" type="xml">
+          <notebook position="inside">
+            <page string="KnowSystem">
+                    <div class="text-muted mb8">
+                        Define attribute-specific FAQ that will be globally applied to any product that has this attribute
+                    </div>
+                    <field name="knowsystem_by_attribute_ids">
+                        <tree editable="top">
+                            <field name="section_ids" widget="many2many_tags" options="{'no_create_edit': 1, 'no_quick_create': 1}"/>
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': 1, 'no_quick_create': 1}"/>
+                            <field name="article_ids" widget="many2many_tags" options="{'no_create_edit': 1, 'no_quick_create': 1}"/>
+                            <field name="value_ids"
+                                   widget="many2many_tags"
+                                   options="{'color_field': 'color', 'no_create_edit': 1, 'no_quick_create': 1}"
+                                   domain="[('id', 'in', parent.value_ids)]"
+                                   string="Applied only if product has one of the values"
+                            />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="section_ids" widget="many2many_tags" options="{'no_create_edit': 1, 'no_quick_create': 1}"/>
+                                    <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': 1, 'no_quick_create': 1}"/>
+                                    <field name="article_ids" widget="many2many_tags" options="{'no_create_edit': 1, 'no_quick_create': 1}"/>
+                                    <field name="value_ids"
+                                           widget="many2many_tags"
+                                           options="{'color_field': 'color', 'no_create_edit': 1, 'no_quick_create': 1}"
+                                           domain="[('id', 'in', parent.value_ids)]"
+                                           string="Applied only if product has one of the values"
+                                    />
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+            </page>
+          </notebook>
+        </field>
+    </record>
+
+</odoo>

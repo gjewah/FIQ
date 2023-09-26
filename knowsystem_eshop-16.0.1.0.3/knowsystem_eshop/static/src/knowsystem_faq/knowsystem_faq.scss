@@ -1,0 +1,30 @@
+#faq_block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.5;
+}
+#faq_popup {
+    position: absolute;
+    z-index: 100000;
+    background-color: white;
+    width: 100%;
+    padding: 1%;
+    box-shadow: inset 0 0 1px black;
+    opacity: 1;
+    background-color: white;
+    overscroll-behavior: none;
+}
+#faq_body {
+    position: relative;
+    overflow: auto;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-height: 60vh;
+    width: 100% !important;
+    overscroll-behavior: none;
+}

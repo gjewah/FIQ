@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <record id="product_template_view_form_knowsystem" model="ir.ui.view">
+        <field name="name">product.template.form.knowsystem</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="KnowSystem">
+                    <group>
+                        <field name="never_show_faq"/>
+                    </group>
+                    <div class="text-muted mb8" attrs="{'invisible': [('never_show_faq', '=', True)]}">
+                        Define how to search articles to generate this product FAQ. All items found by any criteria below as well as the items found by global criteria (see the configuration page) will be linked to this template. Please take into account that each attribute may also have its own global  rules (independent from the template) to generate FAQ
+                    </div>
+                    <field name="knowsystem_by_attribute_ids" attrs="{'invisible': [('never_show_faq', '=', True)]}">
+                        <tree editable="top">
+                            <field name="section_ids" widget="many2many_tags" options="{'no_create_edit': 1, 'no_quick_create': 1}"/>
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': 1, 'no_quick_create': 1}"/>
+                            <field name="article_ids" widget="many2many_tags" options="{'no_create_edit': 1, 'no_quick_create': 1}"/>
+                            <field name="value_ids"
+                                   widget="many2many_tags"
+                                   options="{'color_field': 'color', 'no_create_edit': 1, 'no_quick_create': 1}"
+                                   string="Applied only if product has all the values"
+                            />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="section_ids" widget="many2many_tags" options="{'no_create_edit': 1, 'no_quick_create': 1}"/>
+                                    <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': 1, 'no_quick_create': 1}"/>
+                                    <field name="article_ids" widget="many2many_tags" options="{'no_create_edit': 1, 'no_quick_create': 1}"/>
+                                    <field name="value_ids"
+                                           widget="many2many_tags"
+                                           options="{'color_field': 'color', 'no_create_edit': 1, 'no_quick_create': 1}"
+                                           string="Applied only if product has all the values"
+                                    />
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

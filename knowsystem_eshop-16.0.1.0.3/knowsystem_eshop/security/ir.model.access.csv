@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_knowsystem_by_attribute_kms_user,access_knowsystem_by_attribute_kms_user,model_knowsystem_by_attribute,base.group_user,1,1,1,1

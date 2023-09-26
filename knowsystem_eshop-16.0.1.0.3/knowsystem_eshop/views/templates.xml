@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template inherit_id="website_sale.product" id="product_eshop_knowsystem">
+        <xpath expr="//div[@id='product_details']" position="inside">
+            <t t-set="faq_button" t-value="product.return_faq_button(request.website)"/>
+            <t t-if="faq_button">
+                <hr/>
+                <div id="knowsystem_faq">
+                    <a class="knowsystem_show_faq" t-att-id="product.id" href="#">
+                        <t t-out="faq_button"/>
+                    </a>
+                </div>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('row')]" position="before">
+            <div id="faq_container"/>
+        </xpath>
+    </template>
+
+</odoo>
