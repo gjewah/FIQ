@@ -11,6 +11,7 @@ class ProductProduct(models.Model):
     cx_unique_product_code = fields.Char(
         required=True,
         default="/",
+        translate=True,
     )
 
     @api.model_create_multi
@@ -22,10 +23,13 @@ class ProductProduct(models.Model):
 
         Returns:
             res: Result of calling super().create() with updated vals_list."""
-
+        vals_list_updated = []
         for vals in vals_list:
-            product_code = vals.get("cx_unique_product_code")
-            if product_code is None or product_code == "/":
+            # product_code = vals.get("cx_unique_product_code")
+            if (
+                "cx_unique_product_code" not in vals
+                or vals["cx_unique_product_code"] == "/"
+            ):
                 vals.update(
                     {
                         "cx_unique_product_code": self.env["ir.sequence"].next_by_code(
@@ -33,4 +37,29 @@ class ProductProduct(models.Model):
                         )
                     }
                 )
-                return super().create(vals_list)
+            vals_list_updated.append(vals)
+
+        return super().create(vals_list)
+
+    class ProductTemplate(models.Model):
+        _inherit = "product.template"
+
+        cx_template_product_code = fields.Char(
+            string="Product Number",
+            compute="_compute_related_product_product_code",
+            translate=True,
+            store=True,
+        )
+
+        @api.depends("product_variant_ids.cx_unique_product_code")
+        def _compute_related_product_product_code(self):
+            """Computes related product Product Number."""
+            for template in self:
+                product = template.product_variant_ids.filtered(lambda p: p.active)
+                if product:
+
+                    template.cx_template_product_code = product[
+                        0
+                    ].cx_unique_product_code
+                else:
+                    template.cx_template_product_code = "/"

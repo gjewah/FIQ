@@ -31,10 +31,12 @@ class TestProductSequence(TransactionCase):
         """
         product_3 = self.product_product.create({"name": "Apple"})
 
-        self.cr.execute(
-            "update product_product set cx_unique_product_code='/' where id=%s",
-            (tuple(product_3.ids),),
-        )
+        # self.cr.execute(
+        #     "update product_product set cx_unique_product_code=NULL where id=%s",
+        #     (tuple(product_3.ids),),
+        # )
+        # Set cx_unique_product_code to '/'
+        product_3.write({"cx_unique_product_code": "/"})
         product_3.invalidate_recordset()
         self.assertEqual(product_3.cx_unique_product_code, "/")
         post_init_hook(self.env.cr, None)
@@ -46,11 +48,11 @@ class TestProductSequence(TransactionCase):
         )
 
     def test_product_product_creation(self):
-        """Tests creating a new product and validating its unique product code.
+        """Tests creating a new product and validating its unique Product Number.
 
         This test does the following:
 
-        - Gets the next sequence number for unique product codes.
+        - Gets the next sequence number for unique Product Numbers.
         - Creates a new product.
         - Validates that the new product's cx_unique_product_code matches
           the expected next sequence number.
@@ -67,5 +69,5 @@ class TestProductSequence(TransactionCase):
         self.assertEqual(
             product_1.cx_unique_product_code,
             str(next_number),
-            "Product code should match next sequence number",
+            "Product Number should match next sequence number",
         )
