@@ -80,8 +80,8 @@
         <field name="inherit_id" ref="product.product_kanban_view" />
         <field name="arch" type="xml">
 
-            <field name="name" position="after">
-                <br />
+            <field name="name" position="before">
+                <!-- <br /> -->
                 <field name="cx_unique_product_code" />
                 <br />
         </field>
@@ -159,9 +159,10 @@
         <field name="inherit_id" ref="product.product_template_kanban_view" />
         <field name="arch" type="xml">
 
-            <field name="name" position="after">
-                <br />
+            <field name="name" position="before">
+
                 <field name="cx_template_product_code" />
+                <br />
         </field>
         </field>
     </record>
