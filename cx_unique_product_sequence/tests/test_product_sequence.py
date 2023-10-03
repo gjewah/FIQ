@@ -15,6 +15,7 @@ class TestProductSequence(TransactionCase):
         super(TestProductSequence, self).setUp()
         self.product_product = self.env["product.product"]
         self.sequence = self.env["ir.sequence"]
+        self.product_template = self.env["product.template"]
 
     def test_post_init_hook(self):
         """Tests the post_init_hook function.
@@ -70,4 +71,51 @@ class TestProductSequence(TransactionCase):
             product_1.cx_unique_product_code,
             str(next_number),
             "Product Number should match next sequence number",
+        )
+
+    def test_product_template(self):
+        """Tests the product template's unique code sync with variants.
+
+        This test does the following:
+
+        - Creates a new product template
+        - Checks the initial variant's code matches the template
+        - Creates a second variant
+        - Checks the template code does not change
+        - Archives the initial variant
+        - Checks the template code updates to match the active variant
+        """
+        # Create a product template
+        template = self.product_template.create({"name": "Test Template"})
+        # Check the related product
+        related_product = template.product_variant_ids[0]
+        self.assertTrue(related_product)
+        # Check the related product's cx_unique_product_code
+        #  is the same as the template's cx_template_product_code
+        self.assertEqual(
+            template.cx_template_product_code,
+            related_product.cx_unique_product_code,
+            "code should be the same",
+        )
+        # Create another related product.product.
+        related_product_1 = self.product_product.create(
+            {
+                "name": "Test Product 1",
+                "product_tmpl_id": template.id,
+            }
+        )
+        self.assertTrue(related_product_1)
+        # Check if the  template's cx_template_product_code has not changed
+        self.assertEqual(
+            template.cx_template_product_code,
+            related_product.cx_unique_product_code,
+            "code should not change",
+        )
+        # Archive the first related product.product.
+        related_product.active = False
+        # Check if the  template's cx_template_product_code has changed
+        self.assertEqual(
+            template.cx_template_product_code,
+            related_product_1.cx_unique_product_code,
+            "code should be equal to code of next active product.product",
         )

@@ -37,6 +37,16 @@
                     filter_domain="[('cx_unique_product_code', 'ilike', self)]"
                 />
             </field>
+             <!-- Add group by filter for Product Template -->
+            <filter name="categ_id" position="after">
+                <filter
+                    name="group_by_product_template"
+                    string="Product Template"
+                    domain="[]"
+                    context="{'group_by':'product_tmpl_id'}"
+                />
+                </filter>
+
         </field>
     </record>
 
@@ -60,9 +70,22 @@
 
 
         </field>
+    </record>
 
+       <!--## Kanban ##-->
 
+       <record model="ir.ui.view" id="cx_product_kanban_view">
+        <field name="name">cx.product.product.kanban</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_kanban_view" />
+        <field name="arch" type="xml">
 
+            <field name="name" position="after">
+                <br />
+                <field name="cx_unique_product_code" />
+                <br />
+        </field>
+        </field>
     </record>
 
     <!--####################
@@ -95,7 +118,7 @@
         <field name="priority">99</field>
         <field name="inherit_id" ref="product.product_template_search_view" />
         <field name="arch" type="xml">
-            <!-- Add search field for unique Product Number -->
+            <!-- Add search field for Product Template Number -->
             <field name="name" position="after">
                 <field
                     name="cx_template_product_code"
@@ -128,6 +151,20 @@
         </field>
     </record>
 
+    <!--## Kanban ##-->
+
+    <record model="ir.ui.view" id="cx_product_template_kanban_view">
+        <field name="name">cx.product.template.kanban</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view" />
+        <field name="arch" type="xml">
+
+            <field name="name" position="after">
+                <br />
+                <field name="cx_template_product_code" />
+        </field>
+        </field>
+    </record>
 
 
 </odoo>

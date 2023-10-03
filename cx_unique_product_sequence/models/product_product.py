@@ -51,7 +51,9 @@ class ProductProduct(models.Model):
             store=True,
         )
 
-        @api.depends("product_variant_ids.cx_unique_product_code")
+        @api.depends(
+            "product_variant_ids.cx_unique_product_code", "product_variant_ids.active"
+        )
         def _compute_related_product_product_code(self):
             """Computes related product Product Number."""
             for template in self:
