@@ -15,7 +15,7 @@
                 <field
                     name="cx_unique_product_code"
                     optional="hide"
-                    string="Product number"
+                    string="Product No."
                 />
             </field>
         </field>
@@ -33,7 +33,7 @@
             <field name="name" position="after">
                 <field
                     name="cx_unique_product_code"
-                    string="Product Number"
+                    string="Product No."
                     filter_domain="[('cx_unique_product_code', 'ilike', self)]"
                 />
             </field>
@@ -62,7 +62,7 @@
         <field name="arch" type="xml">
             <xpath expr="//div[@class='oe_title']" position="after">
                 <h2>
-                <label for="cx_unique_product_code" string="Product number" />
+                <label for="cx_unique_product_code" string="Product No." />
                 <field name="cx_unique_product_code" decoration-bf="1" readonly="1" />
                 </h2>
             </xpath>
@@ -104,7 +104,7 @@
                 <field
                     name="cx_template_product_code"
                     optional="hide"
-                    string="Product number"
+                    string="Product No."
                 />
             </field>
         </field>
@@ -122,7 +122,7 @@
             <field name="name" position="after">
                 <field
                     name="cx_template_product_code"
-                    string="Product Template Number"
+                    string="Product Template No."
                     filter_domain="[('cx_template_product_code', 'ilike', self)]"
                 />
             </field>
@@ -142,7 +142,7 @@
 
             <xpath expr="//div[@class='oe_title']" position="after">
                 <h2>
-                <label for="cx_template_product_code" string="Product number" />
+                <label for="cx_template_product_code" string="Product No." />
                 <field name="cx_template_product_code" decoration-bf="1" readonly="1" />
                 </h2>
             </xpath>
