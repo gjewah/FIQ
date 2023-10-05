@@ -32,11 +32,6 @@ class TestProductSequence(TransactionCase):
         """
         product_3 = self.product_product.create({"name": "Apple"})
 
-        # self.cr.execute(
-        #     "update product_product set cx_unique_product_code=NULL where id=%s",
-        #     (tuple(product_3.ids),),
-        # )
-        # Set cx_unique_product_code to '/'
         product_3.write({"cx_unique_product_code": "/"})
         product_3.invalidate_recordset()
         self.assertEqual(product_3.cx_unique_product_code, "/")

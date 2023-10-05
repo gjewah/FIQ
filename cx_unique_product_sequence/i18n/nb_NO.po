@@ -23,7 +23,7 @@ msgstr ""
 #. module: cx_unique_product_sequence
 #: model:ir.model,name:cx_unique_product_sequence.model_product_template
 msgid "Product"
-msgstr "Product Nr."
+msgstr "Produkt Nr."
 
 #. module: cx_unique_product_sequence
 #: model_terms:ir.ui.view,arch_db:cx_unique_product_sequence.cx_product__product_tree_view
@@ -32,7 +32,7 @@ msgstr "Product Nr."
 #: model_terms:ir.ui.view,arch_db:cx_unique_product_sequence.cx_product_search
 #: model_terms:ir.ui.view,arch_db:cx_unique_product_sequence.cx_product_template_form
 msgid "Product No."
-msgstr "Product Nr."
+msgstr "Produkt Nr."
 
 #. module: cx_unique_product_sequence
 #: model:ir.model.fields,field_description:cx_unique_product_sequence.field_product_product__cx_template_product_code

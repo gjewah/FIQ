@@ -23,9 +23,9 @@ class ProductProduct(models.Model):
 
         Returns:
             res: Result of calling super().create() with updated vals_list."""
-        vals_list_updated = []
+
         for vals in vals_list:
-            # product_code = vals.get("cx_unique_product_code")
+
             if (
                 "cx_unique_product_code" not in vals
                 or vals["cx_unique_product_code"] == "/"
@@ -37,7 +37,6 @@ class ProductProduct(models.Model):
                         )
                     }
                 )
-            vals_list_updated.append(vals)
 
         return super().create(vals_list)
 
@@ -59,9 +58,7 @@ class ProductProduct(models.Model):
             for template in self:
                 product = template.product_variant_ids.filtered(lambda p: p.active)
                 if product:
-
-                    template.cx_template_product_code = product[
-                        0
-                    ].cx_unique_product_code
-                else:
-                    template.cx_template_product_code = "/"
+                    product = fields.first(product)
+                    template.cx_template_product_code = (
+                        product.cx_unique_product_code or "/"
+                    )
