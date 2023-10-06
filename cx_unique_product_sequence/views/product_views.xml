@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--###################
+        # Product variant #
+        ###################-->
+
+    <!--##
+    Tree ##-->
+    <record id="cx_product__product_tree_view" model="ir.ui.view">
+        <field name="name">cx.product.product.tree.inherit</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view" />
+        <field name="arch" type="xml">
+            <field name="default_code" position="before">
+                <field
+                    name="cx_unique_product_code"
+                    optional="hide"
+                    string="Product No."
+                />
+            </field>
+        </field>
+    </record>
+
+    <!--##
+    Search ##-->
+    <record id="cx_product_search" model="ir.ui.view">
+        <field name="name">cx.product.search</field>
+        <field name="model">product.product</field>
+        <field name="priority">99</field>
+        <field name="inherit_id" ref="product.product_search_form_view" />
+        <field name="arch" type="xml">
+            <!-- Add search field for unique Product Number -->
+            <field name="name" position="after">
+                <field
+                    name="cx_unique_product_code"
+                    string="Product No."
+                    filter_domain="[('cx_unique_product_code', 'ilike', self)]"
+                />
+            </field>
+             <!-- Add group by filter for Product Template -->
+            <filter name="categ_id" position="after">
+                <filter
+                    name="group_by_product_template"
+                    string="Product Template"
+                    domain="[]"
+                    context="{'group_by':'product_tmpl_id'}"
+                />
+                </filter>
+
+        </field>
+    </record>
+
+    <!--##
+    Form ##-->
+
+    <record id="cx_product_normal_form_view" model="ir.ui.view">
+        <field name="name">cx.product.product.form</field>
+        <field name="model">product.product</field>
+        <field name="mode">primary</field>
+        <field eval="7" name="priority" />
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_title']" position="after">
+                <h2>
+                <label for="cx_unique_product_code" string="Product No." />&#x2063;
+                <field name="cx_unique_product_code" decoration-bf="1" readonly="1" />
+                </h2>
+            </xpath>
+
+
+
+        </field>
+    </record>
+
+       <!--## Kanban ##-->
+
+       <record model="ir.ui.view" id="cx_product_kanban_view">
+        <field name="name">cx.product.product.kanban</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_kanban_view" />
+        <field name="arch" type="xml">
+
+            <field name="name" position="before">
+
+                <field name="cx_unique_product_code" />
+                <br />
+        </field>
+        </field>
+    </record>
+
+    <!--####################
+        # Product template #
+        ####################-->
+
+
+        <!--##
+    Tree ##-->
+    <record id="cx_product__template_tree_view" model="ir.ui.view">
+        <field name="name">cx.product.product.tree.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field
+                    name="cx_template_product_code"
+                    optional="hide"
+                    string="Product No."
+                />
+            </field>
+        </field>
+    </record>
+
+        <!--##
+    Search ##-->
+    <record id="cx_product_template_search" model="ir.ui.view">
+        <field name="name">cx.product.search</field>
+        <field name="model">product.template</field>
+        <field name="priority">99</field>
+        <field name="inherit_id" ref="product.product_template_search_view" />
+        <field name="arch" type="xml">
+            <!-- Add search field for Product Template Number -->
+            <field name="name" position="after">
+                <field
+                    name="cx_template_product_code"
+                    string="Product Template No."
+                    filter_domain="[('cx_template_product_code', 'ilike', self)]"
+                />
+            </field>
+        </field>
+    </record>
+
+
+    <!--##
+    Form ##-->
+
+    <record id="cx_product_template_form" model="ir.ui.view">
+        <field name="name">cx.product.template.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@class='oe_title']" position="after">
+                <h2>
+                <label for="cx_template_product_code" string="Product No." />&#x2063;
+                <field name="cx_template_product_code" decoration-bf="1" readonly="1" />
+                </h2>
+            </xpath>
+
+
+        </field>
+    </record>
+
+    <!--## Kanban ##-->
+
+    <record model="ir.ui.view" id="cx_product_template_kanban_view">
+        <field name="name">cx.product.template.kanban</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view" />
+        <field name="arch" type="xml">
+
+            <field name="name" position="before">
+
+                <field name="cx_template_product_code" />
+                <br />
+        </field>
+        </field>
+    </record>
+
+
+</odoo>

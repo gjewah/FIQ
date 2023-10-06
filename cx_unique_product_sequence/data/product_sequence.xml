@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="seq_product_auto" model="ir.sequence">
+        <field name="name">Product</field>
+        <field name="code">product.product.unique</field>
+        <field eval="7" name="padding" />
+
+    </record>
+</odoo>
