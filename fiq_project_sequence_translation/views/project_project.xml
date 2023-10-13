@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0) -->
+<data>
+    <record id="project_sequence_form_view_inherit" model="ir.ui.view">
+        <field name="name">Project.sequence.project.edit.inherit.fiq</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project_sequence.project_sequence_form_view" />
+
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='sequence_code']" position="attributes">
+                <attribute name="string">Project No.:</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="project_sequence_tree_view_inherit" model="ir.ui.view">
+        <field name="name">Project_sequence_project_view_inherit_fiq</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project_sequence.project_sequence_tree_view" />
+
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence_code']" position="attributes">
+                <attribute name="string">Project No.:</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+</data>
