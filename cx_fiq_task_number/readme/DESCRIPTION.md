@@ -1,0 +1,2 @@
+This module depends on the Task Auto Numbering and Search (Technical Name: task_numbers, faOtools) module, and add the following features:
+Show the task_reference field (un_reference) as a read-only field before the name field in the project.task form and kanban views.
