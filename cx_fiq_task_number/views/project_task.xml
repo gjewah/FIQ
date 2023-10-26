@@ -32,7 +32,11 @@
                 <attribute name="invisible">1</attribute>
             </field>
             <field name="name" position="before">
-                <field name="un_reference" class="oe_inline" readonly="1" />
+                <div style="padding-top: 2px;" class="oe_inline m-sm-0 pe-3"><field
+                        name="un_reference"
+                        class="m-0 p-0"
+                        readonly="1"
+                    /></div>
             </field>
         </field>
     </record>
