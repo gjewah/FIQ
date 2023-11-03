@@ -32,12 +32,14 @@
                 <attribute name="invisible">1</attribute>
             </field>
             <field name="name" position="before">
-                <field
-                    name="un_reference"
-                    class="o_task_name text-truncate"
-                    style="width:auto !important;padding:2px 9px 2px 0px !important;display:contents; font-weight: 400 !important;"
-                />
-                <span class="p-2" />
+                <div style="padding-top: 2px;" class="oe_inline m-sm-0 pe-3">
+                    <field
+                        name="un_reference"
+                        style="font-weight: 100; font-size: 0.85em;"
+                        class="m-0 p-0"
+                        readonly="1"
+                    />
+                </div>
             </field>
         </field>
     </record>
