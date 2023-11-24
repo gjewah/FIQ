@@ -1,0 +1,1 @@
+This module adds task reference number to the emails sent from task chatter.
