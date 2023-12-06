@@ -8,7 +8,7 @@
     "category": "Services/Project",
     "website": "https://cetmix.com",
     "author": "Cetmix",
-    "license": "",
+    "license": "AGPL-3",
     "installable": True,
     "depends": [
         "task_numbers",
