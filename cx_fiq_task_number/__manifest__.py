@@ -5,7 +5,7 @@
     "summary": """This module displays the task_reference field
                    in the project.task form and kanban views.""",
     "version": "16.0.1.0.0",
-    "category": "Product",
+    "category": "Services/Project",
     "website": "https://cetmix.com",
     "author": "Cetmix",
     "license": "",

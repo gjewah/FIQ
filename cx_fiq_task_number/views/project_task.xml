@@ -34,10 +34,10 @@
             <widget name="web_ribbon" position="before">
                 <div class="row">
                     <div class="col col-md-8">
-                           <field
-                                name="un_reference"
-                                style="font-weight: 500; font-size:1.4em;color: black;"
-                            />
+                        <field
+                            name="un_reference"
+                            style="font-weight: 500; font-size:1.4em;color: black;"
+                        />
                     </div>
                 </div>
             </widget>
