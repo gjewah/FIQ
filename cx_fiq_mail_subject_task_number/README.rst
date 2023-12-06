@@ -13,11 +13,14 @@ Task reference in the mail subject
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/github-cetmix%2Ffiq--cetmix-lightgray.png?logo=github
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+    :alt: License: AGPL-3
+.. |badge3| image:: https://img.shields.io/badge/github-cetmix%2Ffiq--cetmix-lightgray.png?logo=github
     :target: https://github.com/cetmix/fiq-cetmix/tree/16.0/cx_fiq_mail_subject_task_number
     :alt: cetmix/fiq-cetmix
 
-|badge1| |badge2|
+|badge1| |badge2| |badge3|
 
 This module adds task reference number to the emails sent from task
 chatter.

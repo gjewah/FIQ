@@ -2,12 +2,14 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     "name": "Task reference in the mail subject",
-    "summary": """This module adds value of the task_reference field into mail subject """,
+    "summary": """
+    This module adds value of the task_reference field into mail subject
+      """,
     "version": "16.0.1.0.0",
     "category": "Product",
     "website": "https://cetmix.com",
     "author": "Cetmix",
-    "license": "",
+    "license": "AGPL-3",
     "installable": True,
     "depends": [
         "task_numbers",
